@@ -1,21 +1,200 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Datenschutzerklärung — Agenzo</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;margin:0;background:#0b0f14;color:#e8eef5}.wrap{max-width:900px;margin:auto;padding:28px}header{display:flex;align-items:center;gap:12px}.spacer{flex:1}.btn{padding:8px 12px;border:1px solid #334155;border-radius:10px}a{color:#8ab4ff;text-decoration:none}nav{margin-top:8px}nav a{margin-right:10px}h1{margin:12px 0 0}section{margin:22px 0}.muted{opacity:.8}</style>
-<script>window.addEventListener('DOMContentLoaded',()=>{var a=document.getElementById('openExternal');if(a)a.href=location.href;});</script></head>
-<body><div class="wrap">
-<header><h1>Agenzo – Smart Reminders</h1><div class="spacer"></div><a id="openExternal" class="btn" target="_blank" rel="noopener">Im Browser öffnen ↗</a></header>
-<nav class="muted"><strong>Sprache:</strong>
-<a href="../en/">EN</a><a href="../pt/">PT</a><a href="../es/">ES</a><a href="../it/">IT</a><a href="../fr/">FR</a><a href="../de/">DE</a></nav>
-<h2>Datenschutzerklärung</h2>
-<p class="muted">Letzte Aktualisierung: 10. Nov. 2025</p>
-<section><h3>1. Wer wir sind</h3><p><strong>Agenzo – Smart Reminders</strong> („Agenzo“, „App“) hilft dir beim Erstellen und Empfangen von Erinnerungen. Diese Erklärung beschreibt, welche Daten wir verarbeiten und warum.</p></section>
-<section><h3>2. Verarbeitete Daten</h3><ul><li><strong>Konto (optional):</strong> bei Google-Anmeldung erhalten wir Name, E-Mail und Profilfoto.</li><li><strong>Erinnerungen:</strong> Titel, Notizen, Fälligkeitsdaten/-zeiten und – falls aktiviert – Standort für ortsbasierte Erinnerungen.</li><li><strong>Gerät & Diagnose:</strong> Gerätemodell, OS-Version, App-Version, Crash-Protokolle und einfache Analysen.</li><li><strong>Benachrichtigungen:</strong> erforderliche Planungen zur Zustellung.</li></ul></section>
-<section><h3>3. Zwecke</h3><ul><li>Bereitstellung des Dienstes (Erstellen, Synchronisieren, Zustellen von Erinnerungen).</li><li>Sicherheit, Leistung und Zuverlässigkeit.</li><li>Erfüllung rechtlicher Pflichten.</li></ul></section>
-<section><h3>4. Speicherung</h3><ul><li><strong>Gerät:</strong> lokale Speicherung.</li><li><strong>Cloud (optional):</strong> bei Anmeldung ggf. Synchronisierung über Google Firebase (abhängig von genutzten Funktionen).</li></ul></section>
-<section><h3>5. Weitergabe</h3><p>Wir verkaufen keine personenbezogenen Daten. Dienstleister (z. B. Google Firebase) können Daten ausschließlich zur Bereitstellung der App verarbeiten.</p></section>
-<section><h3>6. Berechtigungen</h3><ul><li>Benachrichtigungen.</li><li>Standort (optional) für ortsbasierte Erinnerungen.</li></ul></section>
-<section><h3>7. Aufbewahrung</h3><p>Wir speichern Daten nur so lange wie nötig. Du kannst Erinnerungen löschen und die Kontolöschung anfordern.</p></section>
-<section><h3>8. Deine Rechte</h3><p>Zugriff, Berichtigung, Löschung, Datenübertragbarkeit gemäß geltendem Recht. Kontaktiere uns.</p></section>
-<section><h3>9. Kinder</h3><p>Die App richtet sich nicht an Minderjährige unter dem nach lokalem Recht geltenden Alter.</p></section>
-<section><h3>10. Kontakt</h3><p>E-Mail: <a href="mailto:support@agenzo.app">support@agenzo.app</a></p></section>
-<section><h3>11. Änderungen</h3><p>Änderungen werden hier mit aktualisiertem Datum veröffentlicht.</p></section>
-</div></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenzo – Smart Reminders · Datenschutzerklärung (DE)</title>
+  <meta name="description" content="Datenschutzerklärung für Agenzo – Smart Reminders (DE)">
+  <style>
+    :root{--bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,13,16,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:2}
+    .bar{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:12px 24px}
+    .brand{font-weight:700;letter-spacing:.2px}
+    nav a{margin-right:12px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer}
+    .btn:hover{border-color:#2b3542}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:24px}
+    h1{font-size:1.8rem;margin:0 0 8px}
+    h2{margin-top:28px;font-size:1.15rem}
+    h3{margin-top:18px;font-size:1.02rem}
+    .meta{color:var(--muted);font-size:.92rem}
+    .toc{border-left:3px solid var(--border);padding-left:14px;margin:12px 0 4px}
+    code.k{background:#0f141a;border:1px solid var(--border);padding:0 6px;border-radius:6px}
+    footer{color:var(--muted);font-size:.9rem;margin:32px 0}
+    @media print{
+      header, .btn.print, nav{display:none}
+      .card{border:0}
+      body{background:#fff;color:#000}
+      a{color:#06c}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand">Agenzo – Smart Reminders</div>
+      <nav aria-label="Seletor de idioma">
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/en/">EN</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/pt/">PT</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/es/">ES</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/it/">IT</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/fr/">FR</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/de/" aria-current="page">DE</a>
+      </nav>
+      <button class="btn print" onclick="window.print()" title="Imprimir / Guardar em PDF">🖨️ Imprimir / PDF</button>
+    </div>
+  </header>
+
+
+  <main class="wrap">
+    <article class="card">
+      <h1 id="top">Datenschutzerklärung (DE)</h1>
+      <p class="meta"><strong>Gültig ab:</strong> 14. November 2025 • <strong>Version:</strong> 1.1</p>
+      <p class="meta"><strong>Verantwortlicher:</strong> Cosmin Oprea (natürliche Person) • <strong>Kontakt:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
+      <p class="meta"><em>Gilt für: Agenzo – Smart Reminders Mobile-Apps (Android/iOS) und zugehörige Support-Kanäle.</em></p>
+
+      <div class="toc">
+        <strong>Inhaltsverzeichnis</strong>
+        <ol>
+          <li><a href="#scope">Geltungsbereich</a></li>
+          <li><a href="#data">Welche Daten wir erheben und warum</a></li>
+          <li><a href="#processing">Wie wir Daten verarbeiten</a></li>
+          <li><a href="#legal">Rechtsgrundlagen (DSGVO)</a></li>
+          <li><a href="#processors">Auftragsverarbeiter</a></li>
+          <li><a href="#retention">Speicherdauer</a></li>
+          <li><a href="#transfers">Internationale Übermittlungen</a></li>
+          <li><a href="#rights">Ihre Rechte</a></li>
+          <li><a href="#security">Sicherheit</a></li>
+          <li><a href="#permissions">Angeforderte Berechtigungen</a></li>
+          <li><a href="#analytics">Analyse & Absturzberichte</a></li>
+          <li><a href="#changes">Änderungen dieser Erklärung</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ol>
+      </div>
+
+      <h2 id="scope">1) Geltungsbereich</h2>
+      <p>Diese Datenschutzerklärung erläutert, welche Daten Agenzo („wir“) erhebt, wie wir sie nutzen und teilen, Ihre Wahlmöglichkeiten sowie Ihre Rechte nach geltendem Recht (z. B. DSGVO). Durch Nutzung der App stimmen Sie dieser Erklärung zu. Wenn Sie nicht einverstanden sind, beenden Sie bitte die Nutzung und kontaktieren Sie uns.</p>
+
+      <h2 id="data">2) Welche Daten wir erheben und warum</h2>
+      <h3>Konto & Authentifizierung</h3>
+      <p><strong>Was:</strong> E-Mail-Adresse und Authentifizierungs-Tokens bei der Anmeldung (Firebase Authentication per E-Mail/Passwort oder Google-Anmeldung).<br>
+         <strong>Warum:</strong> Ihr Konto schützen, An-/Abmeldung und Passwort-Resets ermöglichen, unbefugten Zugriff verhindern.</p>
+
+      <h3>Erinnerungen & Aufgaben (in Ihrem Konto gespeichert)</h3>
+      <p><strong>Was:</strong> Titel, Notizen, Datum/Uhrzeit, Zeitzone, Abschlussstatus und lokale Benachrichtigungs-IDs.<br>
+         <strong>Warum:</strong> Ihren Kalender geräteübergreifend anzeigen und Benachrichtigungen planen/abbrechen.<br>
+         <em>Hinweis:</em> Vom Server zurückgegebene <strong>Sprachtranskripte</strong> werden in die <strong>Notizen</strong> der Erinnerung kopiert, damit Sie sie später lesen/bearbeiten können.</p>
+
+      <h3>Standortbasierte Erinnerungen (Opt-in)</h3>
+      <p><strong>Was:</strong> Breitengrad/Längengrad, Radius, Auslösermodus (Betreten/Verlassen), Aktivieren/Deaktivieren-Flags, Bezeichnung und Zeitstempel des letzten Auslösers.<br>
+         <strong>Warum:</strong> Geofences lokal aktivieren und doppelte Auslösungen vermeiden.</p>
+
+      <h3>Gerätedaten & lokale Caches (auf Ihrem Gerät)</h3>
+      <p><strong>Was:</strong> Gewählte Sprache, Einwilligungs-/„nicht erneut fragen“-Schalter, Status der Benachrichtigungsberechtigung, zwischengespeicherte Daten geplanter Benachrichtigungen, Deep-Link-Payloads sowie eine <strong>Warteschlange ausstehender Aktionen</strong> (Erinnerungs-ID, Aktion wie Erledigt/Snooze und Zeitstempel) für Offline-Nutzung.<br>
+         <strong>Warum:</strong> Wiederholte Berechtigungsabfragen vermeiden, den richtigen Inhalt aus Benachrichtigungen öffnen und Aktionen nach Rückkehr online nachspielen.</p>
+
+      <h3>Spracheingabe (Opt-in)</h3>
+      <p><strong>Was:</strong> Mikrofon-Audio in einer temporären Datei, Ihre Nutzer-ID, Sprache und Zeitzone.<br>
+         <strong>Warum:</strong> Sprache in Erinnerungen/Aufgaben umwandeln (siehe <a href="#processors">§5</a> zu Auftragsverarbeitern).</p>
+
+      <h3>Support & Feedback</h3>
+      <p><strong>Was (automatisch angehängt):</strong> Ihre angemeldete <strong>UID</strong>, <strong>Kontomail</strong>, <strong>Sprache</strong>, <strong>Zeitzone</strong> (IANA & Offset), <strong>Plattform</strong>, <strong>OS-Version</strong>, <strong>Geräte-Hostname</strong>, <strong>App-Version</strong> (falls verfügbar) und <strong>Zeitstempel</strong> sowie Ihre Nachricht.<br>
+         <strong>Warum:</strong> Probleme diagnostizieren und wirksam antworten.</p>
+
+      <p><strong>Wir erheben nicht:</strong> Drittanbieter-Analytik, Werbe-IDs oder Marketing-SDK-Daten; keine kontinuierlichen Hintergrund-Standortverläufe (Geofencing läuft auf dem Gerät).</p>
+
+      <h2 id="processing">3) Wie wir Daten verarbeiten</h2>
+      <ul>
+        <li><strong>Zentralspeicher:</strong> Erinnerungen, Aufgaben und Standort-Erinnerungen werden in <strong>Google Cloud Firestore</strong> unter Ihrer Nutzer-ID gespeichert.</li>
+        <li><strong>Benachrichtigungen:</strong> Wir planen <strong>lokale</strong> Benachrichtigungen (kein Marketing-Push). Unter Android können wir exakte Alarme anfordern und Boot-Receiver registrieren, damit Erinnerungen Neustarts überdauern.</li>
+        <li><strong>Geofencing:</strong> Läuft lokal auf Ihrem Gerät; zurückgeschrieben werden nur Auslöse-Zeitstempel.</li>
+        <li><strong>Sprach-Pipeline:</strong> Audio wird sicher hochgeladen, transkribiert, optional zusammengefasst/extrahiert; das <strong>erkannte Transkript</strong> wird zu den Notizen Ihrer Erinnerung hinzugefügt. Die temporäre Audiodatei wird nach Verarbeitung gelöscht.</li>
+      </ul>
+
+      <h2 id="legal">4) Rechtsgrundlagen (DSGVO)</h2>
+      <ul>
+        <li><strong>Vertragserfüllung:</strong> Bereitstellung der von Ihnen angeforderten Erinnerungen, Aufgaben, Benachrichtigungen und zugehörigen Funktionen.</li>
+        <li><strong>Berechtigtes Interesse:</strong> Dienstzuverlässigkeit, Sicherheit und Betrugsprävention (z. B. Vermeidung doppelter Auslöser, Sicherstellung der Zustellung).</li>
+        <li><strong>Einwilligung:</strong> Mikrofon, präziser/Hintergrund-Standort und Benachrichtigungen sind optionale OS-Berechtigungen und jederzeit widerrufbar.</li>
+        <li><strong>Rechtliche Verpflichtung:</strong> Verarbeitung zur Einhaltung geltenden Rechts.</li>
+      </ul>
+
+      <h2 id="processors">5) Auftragsverarbeiter (wer uns beim Betrieb der App unterstützt)</h2>
+      <ol>
+        <li><strong>Google Firebase (Google LLC)</strong> — Authentifizierung und <strong>Cloud Firestore</strong> zur Speicherung Ihrer Erinnerungen, Aufgaben und Standort-Einträge.</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — Verarbeitet von Ihnen über Spracheingabe übermittelte <strong>Audio-Clips</strong> zu Transkripten.</li>
+        <li><strong>Groq (Llama API)</strong> — Erhält <strong>das Transkript und Ihren Zeitzonen-Kontext</strong> (nicht das Roh-Audio), um aus Sprache Erinnerungs-/Aufgabendetails zu extrahieren.</li>
+        <li><strong>Google Maps Platform / Places API</strong> — Kartenrendering, Autovervollständigung und Geokodierung für Standort-Erinnerungen. Anfragen können Ihren Suchtext und grobe Koordinaten enthalten.</li>
+        <li><strong>SendGrid (Twilio SendGrid)</strong> — Übermittelt Support-/Feedback-E-Mails; speichert übliche E-Mail-Metadaten und Inhalte für Zustellung/Diagnostik.</li>
+        <li><strong>Plattform-Plugins</strong> (Geolocator, Geofencing/Vordergrund-Dienst, lokale Benachrichtigungen) — Arbeiten <strong>auf dem Gerät</strong>; sie <strong>übermitteln</strong> Ihre Daten <strong>nicht</strong> an die Anbieter.</li>
+      </ol>
+      <p>Wir <strong>verkaufen</strong> oder vermieten Ihre Daten nicht. Eine Weitergabe erfolgt nur an diese Auftragsverarbeiter oder wenn gesetzlich vorgeschrieben.</p>
+
+      <h2 id="retention">6) Speicherdauer</h2>
+      <ul>
+        <li><strong>Erinnerungen, Aufgaben, Standort-Erinnerungen:</strong> Bis zur Löschung durch Sie oder zur Kontolöschung.</li>
+        <li><strong>Abgeschlossene Einträge:</strong> Für den Verlauf gespeichert, sofern Sie sie nicht löschen.</li>
+        <li><strong>Sprach-Audiodateien (auf dem Gerät):</strong> Unmittelbar nach Serverantwort gelöscht.</li>
+        <li><strong>Sprachtranskripte:</strong> Verbleiben in den <strong>Notizen</strong> der Erinnerung, bis Sie sie bearbeiten oder löschen.</li>
+        <li><strong>Geräte-Caches & Warteschlange ausstehender Aktionen:</strong> Nur auf Ihrem Gerät; entfernt beim Löschen der App-Daten oder Deinstallation.</li>
+        <li><strong>Support/Feedback:</strong> In Firestore gespeichert und via SendGrid versandt; zur Bearbeitung und Prüfung Ihrer Anfrage aufbewahrt. <strong>Wird nicht automatisch</strong> bei Kontolöschung entfernt — mailen Sie uns zur Löschung dieser Support-Datensätze.</li>
+        <li><strong>System-/Betriebsprotokolle (Anbieter):</strong> Von den Auftragsverarbeitern gemäß deren Richtlinien zu Sicherheits-/Diagnosezwecken aufbewahrt.</li>
+      </ul>
+
+      <h2 id="transfers">7) Internationale Übermittlungen</h2>
+      <p>Daten, die von Google, Groq und SendGrid verarbeitet werden, können in der EU und/oder in anderen Ländern (einschließlich USA) verarbeitet werden. Diese Anbieter nutzen anerkannte Transfermechanismen (z. B. Standardvertragsklauseln). Wir wenden die hier beschriebenen Schutzmaßnahmen unabhängig vom Verarbeitungsort an.</p>
+
+      <h2 id="rights">8) Ihre Rechte</h2>
+      <p>Nach Maßgabe des Rechts können Sie Ihre Daten <strong>einsehen</strong>, <strong>berichtigen</strong>, <strong>löschen</strong>, die Verarbeitung <strong>einschränken</strong>, <strong>widersprechen</strong> oder die Daten <strong>übertragen</strong> lassen.</p>
+      <ul>
+        <li><strong>Löschung in der App:</strong> Durch das Löschen Ihres <strong>Kontos</strong> werden Ihre <strong>Erinnerungen, Aufgaben und Standort-Erinnerungen</strong> aus Firestore <strong>sofort</strong> entfernt.
+          <br><em>Nicht automatisch gelöscht:</em> Support-/Feedback-Einsendungen und E-Mail-Kopien (SendGrid/Outbox) sowie Anbieter-Logs. Kontaktieren Sie uns zur Löschung; wir kommen dem nach, soweit keine Aufbewahrungspflicht besteht (z. B. zur Streitbeilegung oder gesetzlichen Pflichten).</li>
+        <li><strong>Berechtigungen:</strong> Sie können Standort/Mikrofon/Benachrichtigungen jederzeit in den Systemeinstellungen widerrufen (Funktionen können dann nicht mehr funktionieren).</li>
+        <li><strong>Weitere Anfragen (Auskunft/Export etc.):</strong> Schreiben Sie an <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Eine Identitätsprüfung kann erforderlich sein.</li>
+      </ul>
+
+      <h2 id="security">9) Sicherheit</h2>
+      <ul>
+        <li>Kontosicherheit über Firebase Authentication; nutzerbezogene Zugriffskontrolle über Firestore-Sicherheitsregeln.</li>
+        <li>Alle App-Server-Verbindungen nutzen HTTPS/TLS.</li>
+        <li>Gerätedaten befinden sich in der Plattform-Sandbox; temporäre Sprachdateien liegen nur in geschützten App-Verzeichnissen.</li>
+        <li>Zugriff auf Produktivdaten ist auf notwendige Operationen beschränkt. Halten Sie Ihr OS aktuell und schützen Sie Ihr Gerät.</li>
+      </ul>
+
+      <h2 id="permissions">10) Angeforderte Berechtigungen (Android/iOS)</h2>
+      <ul>
+        <li><strong>Standort</strong> (ungefähr/genau; ggf. wird „Immer erlauben“ angefordert)</li>
+        <li><strong>Aktivitäts­erkennung</strong> (Android)</li>
+        <li><strong>Mikrofon</strong></li>
+        <li><strong>Benachrichtigungen / Exakte Alarme</strong> (Android)</li>
+        <li><strong>Vordergrunddienst</strong> (Android)</li>
+      </ul>
+      <p>Sie können diese Berechtigungen in den Systemeinstellungen erteilen oder widerrufen.</p>
+
+      <h2 id="analytics">11) Analyse & Absturzberichte</h2>
+      <p>Wir <strong>integrieren</strong> keine Drittanbieter-Analytik und kein Crashlytics. Bei Vertrieb über App-Stores können wir <strong>aggregierte</strong> Stabilitätsmetriken (z. B. Crash-/ANR-Zahlen) aus den Store-Konsolen erhalten. Falls wir später optionale Analyse/Crash-Berichte hinzufügen, aktualisieren wir diese Erklärung und <strong>holen zuvor Ihre Einwilligung ein</strong>.</p>
+
+      <h2 id="changes">12) Änderungen dieser Erklärung</h2>
+      <p>Wir können diese Erklärung an Produkt- oder Rechtsänderungen anpassen. Wir aktualisieren das <strong>Gültig-ab-Datum</strong> oben und informieren bei wesentlichen Änderungen in der App oder per E-Mail. Die weitere Nutzung nach einer Aktualisierung gilt als Zustimmung zur überarbeiteten Fassung.</p>
+
+      <h2 id="contact">13) Kontakt</h2>
+      <p><strong>Verantwortlicher:</strong> Cosmin Oprea (natürliche Person)<br>
+         <strong>E-Mail:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a><br>
+         Für eine Postadresse zur DSGVO-Korrespondenz schreiben Sie uns bitte; wir teilen Ihnen eine Anschrift mit.</p>
+      <p style="margin-top:24px"><a href="#top">↑ Nach oben</a></p>
+    </article>
+
+    <footer class="wrap">
+      <p>© <span id="y"></span> Agenzo – Smart Reminders</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
