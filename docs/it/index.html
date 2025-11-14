@@ -1,21 +1,200 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Informativa sulla Privacy — Agenzo</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;margin:0;background:#0b0f14;color:#e8eef5}.wrap{max-width:900px;margin:auto;padding:28px}header{display:flex;align-items:center;gap:12px}.spacer{flex:1}.btn{padding:8px 12px;border:1px solid #334155;border-radius:10px}a{color:#8ab4ff;text-decoration:none}nav{margin-top:8px}nav a{margin-right:10px}h1{margin:12px 0 0}section{margin:22px 0}.muted{opacity:.8}</style>
-<script>window.addEventListener('DOMContentLoaded',()=>{var a=document.getElementById('openExternal');if(a)a.href=location.href;});</script></head>
-<body><div class="wrap">
-<header><h1>Agenzo – Smart Reminders</h1><div class="spacer"></div><a id="openExternal" class="btn" target="_blank" rel="noopener">Apri nel browser ↗</a></header>
-<nav class="muted"><strong>Lingua:</strong>
-<a href="../en/">EN</a><a href="../pt/">PT</a><a href="../es/">ES</a><a href="../it/">IT</a><a href="../fr/">FR</a><a href="../de/">DE</a></nav>
-<h2>Informativa sulla Privacy</h2>
-<p class="muted">Ultimo aggiornamento: 10 Nov 2025</p>
-<section><h3>1. Chi siamo</h3><p><strong>Agenzo – Smart Reminders</strong> (“Agenzo”, “App”) ti aiuta a creare e ricevere promemoria. Questa informativa spiega quali dati trattiamo e perché.</p></section>
-<section><h3>2. Dati trattati</h3><ul><li><strong>Account (opzionale):</strong> se accedi con Google, riceviamo nome, email e foto profilo.</li><li><strong>Promemoria:</strong> titoli, note, date/ore e, se abilitato, posizione per promemoria geolocalizzati.</li><li><strong>Dispositivo e diagnostica:</strong> modello, versione OS, versione app, crash e analisi di base.</li><li><strong>Notifiche:</strong> programmi necessari per la consegna.</li></ul></section>
-<section><h3>3. Finalità</h3><ul><li>Fornire il servizio (creazione, sincronizzazione e invio promemoria).</li><li>Sicurezza e prestazioni.</li><li>Obblighi legali.</li></ul></section>
-<section><h3>4. Dove sono conservati</h3><ul><li><strong>Dispositivo:</strong> archiviazione locale.</li><li><strong>Cloud (opzionale):</strong> con accesso, possibile sincronizzazione tramite Google Firebase (in base alle funzioni usate).</li></ul></section>
-<section><h3>5. Condivisione</h3><p>Non vendiamo i tuoi dati. Possiamo usare fornitori come Google Firebase per far funzionare l’App.</p></section>
-<section><h3>6. Permessi</h3><ul><li>Notifiche.</li><li>Posizione (opzionale) per promemoria basati sulla posizione.</li></ul></section>
-<section><h3>7. Conservazione</h3><p>Conserviamo i dati solo quanto necessario. Puoi eliminare promemoria e richiedere la cancellazione dell’account.</p></section>
-<section><h3>8. Diritti</h3><p>Accesso, rettifica, cancellazione, portabilità secondo le leggi applicabili. Contattaci.</p></section>
-<section><h3>9. Minori</h3><p>L’App non è destinata ai minori al di sotto dell’età prevista dalla legge.</p></section>
-<section><h3>10. Contatti</h3><p>Email: <a href="mailto:support@agenzo.app">support@agenzo.app</a></p></section>
-<section><h3>11. Modifiche</h3><p>Aggiorneremo questa informativa in questa pagina.</p></section>
-</div></body></html>
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenzo – Smart Reminders · Informativa sulla privacy (IT)</title>
+  <meta name="description" content="Informativa sulla privacy di Agenzo – Smart Reminders (IT)">
+  <style>
+    :root{--bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,13,16,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:2}
+    .bar{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:12px 24px}
+    .brand{font-weight:700;letter-spacing:.2px}
+    nav a{margin-right:12px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer}
+    .btn:hover{border-color:#2b3542}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:24px}
+    h1{font-size:1.8rem;margin:0 0 8px}
+    h2{margin-top:28px;font-size:1.15rem}
+    h3{margin-top:18px;font-size:1.02rem}
+    .meta{color:var(--muted);font-size:.92rem}
+    .toc{border-left:3px solid var(--border);padding-left:14px;margin:12px 0 4px}
+    code.k{background:#0f141a;border:1px solid var(--border);padding:0 6px;border-radius:6px}
+    footer{color:var(--muted);font-size:.9rem;margin:32px 0}
+    @media print{
+      header, .btn.print, nav{display:none}
+      .card{border:0}
+      body{background:#fff;color:#000}
+      a{color:#06c}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand">Agenzo – Smart Reminders</div>
+      <nav aria-label="Seletor de idioma">
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/en/">EN</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/pt/">PT</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/es/">ES</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/it/" aria-current="page">IT</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/fr/">FR</a>
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/de/">DE</a>
+      </nav>
+      <button class="btn print" onclick="window.print()" title="Imprimir / Guardar em PDF">🖨️ Imprimir / PDF</button>
+    </div>
+  </header>
+
+
+  <main class="wrap">
+    <article class="card">
+      <h1 id="top">Informativa sulla privacy (IT)</h1>
+      <p class="meta"><strong>Data di efficacia:</strong> 14 novembre 2025 • <strong>Versione:</strong> 1.1</p>
+      <p class="meta"><strong>Titolare del trattamento:</strong> Cosmin Oprea (persona fisica) • <strong>Contatto:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
+      <p class="meta"><em>Si applica a: app mobili Agenzo – Smart Reminders (Android/iOS) e canali di supporto correlati.</em></p>
+
+      <div class="toc">
+        <strong>Indice</strong>
+        <ol>
+          <li><a href="#scope">Ambito</a></li>
+          <li><a href="#data">Dati che raccogliamo e finalità</a></li>
+          <li><a href="#processing">Come trattiamo i dati</a></li>
+          <li><a href="#legal">Basi giuridiche (GDPR)</a></li>
+          <li><a href="#processors">Responsabili esterni</a></li>
+          <li><a href="#retention">Conservazione dei dati</a></li>
+          <li><a href="#transfers">Trasferimenti internazionali</a></li>
+          <li><a href="#rights">I suoi diritti</a></li>
+          <li><a href="#security">Sicurezza</a></li>
+          <li><a href="#permissions">Permessi richiesti</a></li>
+          <li><a href="#analytics">Analisi e crash reporting</a></li>
+          <li><a href="#changes">Modifiche alla presente informativa</a></li>
+          <li><a href="#contact">Contatti</a></li>
+        </ol>
+      </div>
+
+      <h2 id="scope">1) Ambito</h2>
+      <p>La presente informativa spiega quali dati Agenzo (“noi”) raccoglie, come li utilizziamo e condividiamo, le sue scelte e i suoi diritti ai sensi della normativa applicabile (es. GDPR). Usando l’app, accetta questa informativa. In caso contrario, interrompa l’uso del servizio e ci contatti.</p>
+
+      <h2 id="data">2) Dati che raccogliamo e finalità</h2>
+      <h3>Account e autenticazione</h3>
+      <p><strong>Cosa:</strong> Indirizzo e-mail e token di autenticazione al login (Firebase Authentication via e-mail/password o Accesso con Google).<br>
+         <strong>Perché:</strong> Proteggere il suo account, consentire login/logout e reset della password, prevenire accessi non autorizzati.</p>
+
+      <h3>Promemoria e attività (salvati nel suo account)</h3>
+      <p><strong>Cosa:</strong> Titoli, note, data/ora, fuso orario, stato di completamento e ID locali delle notifiche.<br>
+         <strong>Perché:</strong> Mostrare la sua agenda tra dispositivi e pianificare/annullare notifiche.<br>
+         <em>Nota:</em> Le <strong>trascrizioni vocali</strong> restituite dal nostro server vengono copiate nelle <strong>note</strong> del promemoria per la lettura/modifica successiva.</p>
+
+      <h3>Promemoria basati sulla posizione (opt-in)</h3>
+      <p><strong>Cosa:</strong> Latitudine/longitudine, raggio, modalità di trigger (ingresso/uscita), flag di abilitazione/disabilitazione, etichetta e timestamp dell’ultimo trigger.<br>
+         <strong>Perché:</strong> Attivare geofence localmente ed evitare trigger duplicati.</p>
+
+      <h3>Dati del dispositivo e cache locali (sul suo dispositivo)</h3>
+      <p><strong>Cosa:</strong> Lingua selezionata, preferenze di consenso/“non chiedere più”, stato del permesso notifiche, dati in cache delle notifiche pianificate, payload di deep-link e una <strong>coda di azioni in sospeso</strong> (ID promemoria, azione come Fatto/Rimanda e timestamp) per l’uso offline.<br>
+         <strong>Perché:</strong> Evitare richieste di permesso ripetute, riaprire il contenuto corretto dalle notifiche e riprodurre le azioni al ritorno online.</p>
+
+      <h3>Input vocale (opt-in)</h3>
+      <p><strong>Cosa:</strong> Audio del microfono registrato in un file temporaneo, ID utente, lingua e fuso orario.<br>
+         <strong>Perché:</strong> Convertire la voce in promemoria/attività (vedere <a href="#processors">§5</a> per i responsabili).</p>
+
+      <h3>Supporto e feedback</h3>
+      <p><strong>Cosa (allegato automaticamente):</strong> <strong>UID</strong> connesso, <strong>e-mail dell’account</strong>, <strong>lingua</strong>, <strong>fuso orario</strong> (IANA e offset), <strong>piattaforma</strong>, <strong>versione OS</strong>, <strong>hostname</strong> del dispositivo, <strong>versione app</strong> (se disponibile) e <strong>timestamp</strong>, oltre al messaggio digitato.<br>
+         <strong>Perché:</strong> Diagnosticare problemi e rispondere in modo efficace.</p>
+
+      <p><strong>Non raccogliamo:</strong> analitiche di terze parti, ID pubblicitari o dati di SDK di marketing; tracciamenti continui della posizione in background (il geofencing avviene sul dispositivo).</p>
+
+      <h2 id="processing">3) Come trattiamo i dati</h2>
+      <ul>
+        <li><strong>Archivio principale:</strong> Promemoria, attività e promemoria di posizione sono salvati in <strong>Google Cloud Firestore</strong> sotto il suo ID utente.</li>
+        <li><strong>Notifiche:</strong> Pianifichiamo notifiche <strong>locali</strong> (nessun push di marketing). Su Android, possiamo richiedere allarmi esatti e registrare receiver di boot per la persistenza dopo i riavvii.</li>
+        <li><strong>Geofencing:</strong> Esegue localmente sul dispositivo; solo i timestamp di trigger vengono scritti a ritroso.</li>
+        <li><strong>Pipeline vocale:</strong> L’audio viene caricato in modo sicuro, trascritto, eventualmente riassunto/estratto, e la <strong>trascrizione riconosciuta</strong> viene aggiunta alle note del promemoria. Il file audio temporaneo sul dispositivo è eliminato dopo l’elaborazione.</li>
+      </ul>
+
+      <h2 id="legal">4) Basi giuridiche (GDPR)</h2>
+      <ul>
+        <li><strong>Necessità contrattuale:</strong> Fornire promemoria, attività, notifiche e funzionalità richieste.</li>
+        <li><strong>Interessi legittimi:</strong> Affidabilità del servizio, sicurezza e prevenzione frodi (es., evitare trigger duplicati, assicurare la consegna).</li>
+        <li><strong>Consenso:</strong> Microfono, posizione precisa/in background e notifiche sono permessi del sistema, facoltativi e revocabili in qualsiasi momento.</li>
+        <li><strong>Obbligo legale:</strong> Possiamo trattare dati per conformarci alla normativa applicabile.</li>
+      </ul>
+
+      <h2 id="processors">5) Responsabili esterni (chi ci aiuta a far funzionare l’app)</h2>
+      <ol>
+        <li><strong>Google Firebase (Google LLC)</strong> — Autenticazione e <strong>Cloud Firestore</strong> per archiviare promemoria, attività e record di posizione.</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — Elabora i <strong>clip audio</strong> inviati tramite Voce per produrre trascrizioni.</li>
+        <li><strong>Groq (Llama API)</strong> — Riceve <strong>la trascrizione e il contesto del fuso orario</strong> (non l’audio grezzo) per estrarre dettagli di promemoria/attività dalla voce.</li>
+        <li><strong>Google Maps Platform / Places API</strong> — Rendering mappa, completamento automatico e geocoding per promemoria di posizione. Le richieste possono includere testo di ricerca e coordinate approssimative.</li>
+        <li><strong>SendGrid (Twilio SendGrid)</strong> — Invia email di supporto/feedback; conserva metadati tipici di email e contenuti per consegna/diagnostica.</li>
+        <li><strong>Plugin di piattaforma</strong> (Geolocator, framework di geofencing/servizio in primo piano, notifiche locali) — Operano <strong>sul dispositivo</strong>; <strong>non</strong> trasmettono i suoi dati agli editor.</li>
+      </ol>
+      <p><strong>Non</strong> vendiamo né noleggiamo i suoi dati. Li condividiamo solo con questi responsabili o quando richiesto dalla legge.</p>
+
+      <h2 id="retention">6) Conservazione dei dati</h2>
+      <ul>
+        <li><strong>Promemoria, attività, promemoria di posizione:</strong> Conservati finché non li elimina o elimina l’account.</li>
+        <li><strong>Elementi completati:</strong> Conservati per cronologia salvo eliminazione da parte sua.</li>
+        <li><strong>File audio vocali (sul dispositivo):</strong> Eliminati immediatamente dopo la risposta del server.</li>
+        <li><strong>Trascrizioni vocali:</strong> Persistono nelle <strong>note</strong> del promemoria finché non le modifica o elimina.</li>
+        <li><strong>Cache del dispositivo e coda azioni in sospeso:</strong> Solo sul dispositivo; rimosse quando cancella i dati dell’app o disinstalla.</li>
+        <li><strong>Supporto/feedback:</strong> Archiviati in Firestore e inviati tramite SendGrid; conservati per gestire e auditare la richiesta. <strong>Non vengono rimossi automaticamente</strong> quando elimina l’account — ci scriva per richiederne la cancellazione.</li>
+        <li><strong>Log operativi/sistemici (fornitori):</strong> Conservati dai responsabili secondo le loro policy per sicurezza/diagnostica.</li>
+      </ul>
+
+      <h2 id="transfers">7) Trasferimenti internazionali</h2>
+      <p>I dati trattati da Google, Groq e SendGrid possono essere trattati nell’UE e/o in altri paesi (inclusi gli USA). Questi fornitori adottano meccanismi di trasferimento riconosciuti (es., Clausole Contrattuali Standard). Applichiamo le tutele descritte a prescindere dal luogo di trattamento.</p>
+
+      <h2 id="rights">8) I suoi diritti</h2>
+      <p>Ai sensi di legge può <strong>accedere</strong>, <strong>rettificare</strong>, <strong>cancellare</strong>, <strong>limitare</strong>, <strong>opporsi</strong> o <strong>portare</strong> i suoi dati.</p>
+      <ul>
+        <li><strong>Eliminazione in-app:</strong> Eliminando il suo <strong>account</strong> si rimuovono <strong>promemoria, attività e promemoria di posizione</strong> da Firestore <strong>immediatamente</strong>.
+          <br><em>Non eliminati automaticamente:</em> invii di supporto/feedback e copie e-mail (SendGrid/posta in uscita), e log dei fornitori. Ci contatti per richiederne la cancellazione; eseguiremo salvo obblighi di conservazione (es., risoluzione controversie o adempimenti legali).</li>
+        <li><strong>Permessi:</strong> Revochi posizione/microfono/notifiche nelle impostazioni di sistema in qualsiasi momento (le funzioni possono smettere di funzionare).</li>
+        <li><strong>Altre richieste (accesso/esportazione, ecc.):</strong> Scriva a <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Potremmo dover verificare la sua identità.</li>
+      </ul>
+
+      <h2 id="security">9) Sicurezza</h2>
+      <ul>
+        <li>Sicurezza dell’account tramite Firebase Authentication; controllo accessi per utente tramite regole di sicurezza Firestore.</li>
+        <li>Tutte le comunicazioni app-server usano HTTPS/TLS.</li>
+        <li>I dati sul dispositivo risiedono nella sandbox della piattaforma; i file vocali temporanei restano solo in directory protette dell’app.</li>
+        <li>L’accesso ai dati di produzione è limitato alle operazioni essenziali. Mantenga aggiornato l’OS e protegga il dispositivo.</li>
+      </ul>
+
+      <h2 id="permissions">10) Permessi richiesti (Android/iOS)</h2>
+      <ul>
+        <li><strong>Posizione</strong> (approssimata/precisa; potrebbe essere richiesto “Consenti sempre”)</li>
+        <li><strong>Riconoscimento attività</strong> (Android)</li>
+        <li><strong>Microfono</strong></li>
+        <li><strong>Notifiche / Allarmi esatti</strong> (Android)</li>
+        <li><strong>Servizio in primo piano</strong> (Android)</li>
+      </ul>
+      <p>Può concedere o revocare questi permessi nelle impostazioni di sistema.</p>
+
+      <h2 id="analytics">11) Analisi e crash reporting</h2>
+      <p><strong>Non</strong> integriamo analitiche di terze parti né Crashlytics. Se distribuita tramite app store, potremmo ricevere metriche <strong>aggregate</strong> di stabilità (es., conteggio crash/ANR) dalle console degli store. Se in futuro aggiungessimo analisi/report opzionali, aggiorneremo questa informativa e <strong>chiederemo prima il consenso</strong>.</p>
+
+      <h2 id="changes">12) Modifiche alla presente informativa</h2>
+      <p>Possiamo aggiornare questa informativa per riflettere cambiamenti di prodotto o normativi. Aggiorneremo la <strong>Data di efficacia</strong> sopra e, per modifiche materiali, avviseremo in-app o via e-mail. L’uso continuato dopo l’aggiornamento implica l’accettazione della versione rivista.</p>
+
+      <h2 id="contact">13) Contatti</h2>
+      <p><strong>Titolare:</strong> Cosmin Oprea (persona fisica)<br>
+         <strong>Email:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a><br>
+         Se necessita di un contatto postale per la corrispondenza GDPR, ci scriva e forniremo un indirizzo.</p>
+      <p style="margin-top:24px"><a href="#top">↑ Torna su</a></p>
+    </article>
+
+    <footer class="wrap">
+      <p>© <span id="y"></span> Agenzo – Smart Reminders</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
