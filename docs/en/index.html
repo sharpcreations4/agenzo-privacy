@@ -1,113 +1,211 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Privacy Policy — Agenzo – Smart Reminders</title>
-<style>
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;margin:0;background:#0b0f14;color:#e8eef5}
-  .wrap{max-width:900px;margin:auto;padding:28px}
-  header{display:flex;align-items:center;gap:12px}
-  .spacer{flex:1}
-  .btn{padding:8px 12px;border:1px solid #334155;border-radius:10px}
-  a{color:#8ab4ff;text-decoration:none}
-  nav{margin-top:8px}
-  nav a{margin-right:10px}
-  h1{margin:12px 0 0}
-  section{margin:22px 0}
-  .muted{opacity:.8}
-</style>
-<script>
-  window.addEventListener('DOMContentLoaded', function(){
-    var a=document.getElementById('openExternal');
-    if(a) a.href = location.href;
-  });
-</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenzo – Smart Reminders · Privacy Policy (EN)</title>
+  <meta name="description" content="Privacy Policy for Agenzo – Smart Reminders (EN)">
+  <style>
+    :root{
+      --bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1000px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(11,13,16,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:2}
+    .bar{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:12px 24px}
+    .brand{font-weight:700;letter-spacing:.2px}
+    nav a{margin-right:12px;color:var(--muted)}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer}
+    .btn:hover{border-color:#2b3542}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:24px}
+    h1{font-size:1.8rem;margin:0 0 8px}
+    h2{margin-top:28px;font-size:1.15rem}
+    h3{margin-top:18px;font-size:1.02rem}
+    .meta{color:var(--muted);font-size:.92rem}
+    .toc{border-left:3px solid var(--border);padding-left:14px;margin:12px 0 4px}
+    code.k{background:#0f141a;border:1px solid var(--border);padding:0 6px;border-radius:6px}
+    footer{color:var(--muted);font-size:.9rem;margin:32px 0}
+    @media print{
+      header, .btn.print, nav{display:none}
+      .card{border:0}
+      body{background:#fff;color:#000}
+      a{color:#06c}
+    }
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>Agenzo – Smart Reminders</h1>
-      <div class="spacer"></div>
-      <a id="openExternal" class="btn" target="_blank" rel="noopener">Open externally ↗</a>
-    </header>
-    <nav class="muted">
-      <strong>Language:</strong>
-      <a href="../en/">EN</a><a href="../pt/">PT</a><a href="../es/">ES</a><a href="../it/">IT</a><a href="../fr/">FR</a><a href="../de/">DE</a>
-    </nav>
+  <header>
+    <div class="bar">
+      <div class="brand">Agenzo – Smart Reminders</div>
+      <nav aria-label="Language switcher">
+        <a href="en.html" aria-current="page">EN</a>
+        <a href="pt.html">PT</a>
+        <a href="es.html">ES</a>
+        <a href="it.html">IT</a>
+        <a href="fr.html">FR</a>
+        <a href="de.html">DE</a>
+      </nav>
+      <button class="btn print" onclick="window.print()" title="Print / Save as PDF">🖨️ Print / PDF</button>
+    </div>
+  </header>
 
-    <h2>Privacy Policy</h2>
-    <p class="muted">Last updated: 10 Nov 2025</p>
+  <main class="wrap">
+    <article class="card">
+      <h1 id="top">Privacy Policy (EN)</h1>
+      <p class="meta"><strong>Effective date:</strong> 14 November 2025 • <strong>Version:</strong> 1.2</p>
+      <p class="meta"><strong>Controller:</strong> Cosmin Oprea (individual) • <strong>Contact:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
+      <p class="meta"><em>Applies to: Agenzo – Smart Reminders mobile apps (Android/iOS) and related support channels.</em></p>
 
-    <section>
-      <h3>1. Who we are</h3>
-      <p><strong>Agenzo – Smart Reminders</strong> (“Agenzo”, “we”, “the App”) helps you create and receive reminders. This Policy explains what data we process, why, and how you can exercise your rights.</p>
-    </section>
+      <div class="toc">
+        <strong>Table of contents</strong>
+        <ol>
+          <li><a href="#scope">Scope</a></li>
+          <li><a href="#data">Data we collect and why</a></li>
+          <li><a href="#processing">How we process data</a></li>
+          <li><a href="#legal">Legal bases (GDPR)</a></li>
+          <li><a href="#processors">Third-party processors</a></li>
+          <li><a href="#retention">Data retention</a></li>
+          <li><a href="#transfers">International transfers</a></li>
+          <li><a href="#rights">Your rights</a></li>
+          <li><a href="#security">Security</a></li>
+          <li><a href="#permissions">Permissions we request</a></li>
+          <li><a href="#analytics">Analytics & crash reporting</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#appendix">Appendix: Clarifications in v1.2</a></li>
+        </ol>
+      </div>
 
-    <section>
-      <h3>2. Data we process</h3>
+      <h2 id="scope">1) Scope</h2>
+      <p>This Privacy Policy explains what data Agenzo (“we”, “us”) collects, how we use and share it, your choices, and your rights under applicable law (e.g., GDPR). By using the app, you agree to this policy. If you disagree, please stop using the service and contact us.</p>
+
+      <h2 id="data">2) Data we collect and why</h2>
+      <h3>Account & authentication</h3>
+      <p><strong>What:</strong> Email address and authentication tokens when you sign in (Firebase Authentication via email/password or Google Sign-In).<br>
+         <strong>Why:</strong> Secure your account, enable sign-in/out and password resets, and prevent unauthorized access.</p>
+
+      <h3>Reminders & tasks (saved to your account)</h3>
+      <p><strong>What:</strong> Titles, notes, due date/time, time zone, completion status, and local notification IDs.<br>
+         <strong>Why:</strong> Show your agenda across devices and schedule/cancel notifications.<br>
+         <em>Note:</em> <strong>Voice transcripts</strong> returned by our server are copied into reminder <strong>notes</strong> so you can read/edit them later.</p>
+
+      <h3>Location reminders (opt-in)</h3>
+      <p><strong>What:</strong> Latitude/longitude, radius, trigger mode (enter/exit), enable/disable flags, label, and last-triggered timestamp.<br>
+         <strong>Why:</strong> Arm geofences locally and avoid duplicate triggers.</p>
+
+      <h3>Device data & local caches (on your device)</h3>
+      <p><strong>What:</strong> Selected locale, consent/“don’t ask again” toggles, notification permission state, cached scheduled-notification data, deep-link payloads, and a <strong>pending-action queue</strong> (reminder ID, action such as Done/Snooze, and timestamp) for offline use.<br>
+         <strong>Why:</strong> Avoid re-asking for permissions, reopen the right content from notifications, and replay actions when you come back online.</p>
+
+      <h3>Voice input (opt-in)</h3>
+      <p><strong>What:</strong> Microphone audio recorded to a temporary file, your user ID, locale, and time zone.<br>
+         <strong>Why:</strong> Convert speech to reminders/tasks (see <a href="#processors">§5</a> for processors).</p>
+
+      <h3>Support & feedback</h3>
+      <p><strong>What (automatically attached):</strong> Your signed-in <strong>UID</strong>, <strong>account email</strong>, <strong>locale</strong>, <strong>time zone</strong> (IANA & offset), <strong>platform</strong>, <strong>OS version</strong>, <strong>device hostname</strong>, <strong>app version</strong> (if available), and <strong>timestamp</strong>, plus the message you type.<br>
+         <strong>Why:</strong> Diagnose issues and respond effectively.</p>
+
+      <p><strong>We do not collect:</strong> third-party analytics, advertising IDs, or marketing SDK data; continuous background location trails (geofencing runs on-device).</p>
+
+      <h2 id="processing">3) How we process data</h2>
       <ul>
-        <li><strong>Account data (optional):</strong> if you sign in with Google, we receive your name, email and profile photo to create your account.</li>
-        <li><strong>Reminder data:</strong> titles, notes, due dates/times, and (if you enable it) location for geofenced reminders.</li>
-        <li><strong>Device & diagnostics:</strong> device model, OS version, app version, crash logs and basic analytics to keep the App stable and improve features.</li>
-        <li><strong>Notifications:</strong> we store the schedule needed to deliver push notifications on time.</li>
+        <li><strong>Core storage:</strong> Reminders, tasks, and location reminders are stored in <strong>Google Cloud Firestore</strong> under your user ID.</li>
+        <li><strong>Notifications:</strong> We schedule <strong>local</strong> notifications (no marketing pushes). On Android, we may request exact alarms and register boot receivers so reminders persist after restarts.</li>
+        <li><strong>Geofencing:</strong> Runs locally on your device; only trigger timestamps are written back.</li>
+        <li><strong>Voice pipeline:</strong> Audio is uploaded securely, transcribed, optionally summarized/extracted, and the <strong>recognized transcript</strong> is added to your reminder notes. The temporary audio file on your device is deleted after processing.</li>
       </ul>
-    </section>
 
-    <section>
-      <h3>3. Why we use your data</h3>
+      <h2 id="legal">4) Legal bases (GDPR)</h2>
       <ul>
-        <li>Provide the service (create, sync and deliver reminders and notifications).</li>
-        <li>Maintain safety, performance and reliability (diagnostics, crash reports, abuse prevention).</li>
-        <li>Comply with legal obligations where applicable.</li>
+        <li><strong>Contractual necessity:</strong> Provide reminders, tasks, notifications, and related features you request.</li>
+        <li><strong>Legitimate interests:</strong> Service reliability, security, and fraud prevention (e.g., avoiding duplicate triggers, ensuring delivery accuracy).</li>
+        <li><strong>Consent:</strong> Microphone, precise/background location, and notifications are optional OS-level permissions you can withdraw at any time.</li>
+        <li><strong>Legal obligation:</strong> We may process data to comply with applicable law.</li>
       </ul>
-    </section>
 
-    <section>
-      <h3>4. Where data is stored</h3>
+      <h2 id="processors">5) Third-party processors (who helps us operate the app)</h2>
+      <ol>
+        <li><strong>Google Firebase (Google LLC)</strong> — Authentication and <strong>Cloud Firestore</strong> storage for your reminders, tasks, and location records.</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — Processes <strong>audio clips</strong> you submit via Voice input to produce transcripts.</li>
+        <li><strong>Groq (Llama API)</strong> — Receives <strong>the transcript and your time-zone context</strong> (not the raw audio) to extract reminder/task details from speech.</li>
+        <li><strong>Google Maps Platform / Places API</strong> — Map rendering, autocomplete, and geocoding for location reminders. Requests may include your search text and coarse coordinates.</li>
+        <li><strong>SendGrid (Twilio SendGrid)</strong> — Transmits support/feedback emails; stores typical email metadata and message content for delivery/diagnostics.</li>
+        <li><strong>Platform plugins</strong> (Geolocator, geofencing/foreground-service frameworks, local notifications) — Operate <strong>on-device</strong>; they do <strong>not</strong> transmit your data to their publishers.</li>
+      </ol>
+      <p>We <strong>do not</strong> sell or rent your data. We share it only with these processors or where required by law.</p>
+
+      <h2 id="retention">6) Data retention</h2>
       <ul>
-        <li><strong>On device:</strong> your reminders may be stored locally on your phone.</li>
-        <li><strong>Cloud (optional):</strong> if you sign in, data may sync via Google Firebase services (e.g., Authentication, Firestore/Realtime Database, Analytics, Crashlytics). Actual services depend on features you use.</li>
+        <li><strong>Reminders, tasks, location reminders:</strong> Kept until you delete them or delete your account.</li>
+        <li><strong>Completed items:</strong> Kept for history unless you delete them.</li>
+        <li><strong>Voice audio files (on device):</strong> Deleted immediately after the server responds.</li>
+        <li><strong>Voice transcripts:</strong> Persist in your reminder <strong>notes</strong> until you edit or delete them.</li>
+        <li><strong>Device caches & pending-action queue:</strong> Reside only on your device; removed when you clear app data or uninstall.</li>
+        <li><strong>Support/feedback:</strong> Stored in Firestore and sent via SendGrid; retained to handle and audit your request. <strong>Not automatically removed</strong> when you delete your account—email us to request deletion of support records.</li>
+        <li><strong>System/operational logs (providers):</strong> Retained by processors per their policies for security/diagnostics.</li>
       </ul>
-    </section>
 
-    <section>
-      <h3>5. Sharing</h3>
-      <p>We do not sell your personal data. We may share limited data with service providers solely to operate the App (e.g., Google Firebase). Providers process data under our instructions and applicable terms.</p>
-    </section>
+      <h2 id="transfers">7) International transfers</h2>
+      <p>Data handled by Google, Groq, and SendGrid may be processed in the EU and/or other countries (including the US). These providers support recognized transfer mechanisms (e.g., Standard Contractual Clauses). We apply the protections described here regardless of processing location.</p>
 
-    <section>
-      <h3>6. Permissions</h3>
+      <h2 id="rights">8) Your rights</h2>
+      <p>Subject to law, you may <strong>access</strong>, <strong>rectify</strong>, <strong>delete</strong>, <strong>restrict</strong>, <strong>object</strong>, or <strong>port</strong> your data.</p>
       <ul>
-        <li><strong>Notifications:</strong> to deliver reminders.</li>
-        <li><strong>Location (optional):</strong> only if you enable location-based reminders. You can disable it at any time in system settings.</li>
+        <li><strong>In-app deletion:</strong> Deleting your <strong>account</strong> removes your <strong>reminders, tasks, and location reminders</strong> from Firestore <strong>immediately</strong>.
+          <br><em>Not automatically deleted:</em> support/feedback submissions and email copies (SendGrid/outbox), and provider logs. Contact us to request their deletion; we’ll comply unless we must retain them (e.g., to resolve disputes or meet legal obligations).</li>
+        <li><strong>Permissions:</strong> Revoke location/microphone/notifications in system settings at any time (features may stop working).</li>
+        <li><strong>Other requests (access/export, etc.):</strong> Email <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. We may need to verify your identity.</li>
       </ul>
-    </section>
 
-    <section>
-      <h3>7. Retention</h3>
-      <p>We keep data only as long as needed for the purposes above. You can delete reminders in the App and, if signed in, request account deletion.</p>
-    </section>
+      <h2 id="security">9) Security</h2>
+      <ul>
+        <li>Account security via Firebase Authentication; per-user access control via Firestore security rules.</li>
+        <li>All app-server communications use HTTPS/TLS.</li>
+        <li>On-device data lives in the platform sandbox; temporary voice files are kept only in protected app directories.</li>
+        <li>Access to production data is limited to essential operations. Keep your OS updated and protect your device.</li>
+      </ul>
 
-    <section>
-      <h3>8. Your rights</h3>
-      <p>Depending on your region, you may access, correct, delete, or export your data. Contact us to exercise these rights.</p>
-    </section>
+      <h2 id="permissions">10) Permissions we request (Android/iOS)</h2>
+      <ul>
+        <li><strong>Location</strong> (approximate/precise; “Allow always” may be requested)</li>
+        <li><strong>Activity Recognition</strong> (Android)</li>
+        <li><strong>Microphone</strong></li>
+        <li><strong>Notifications / Exact alarms</strong> (Android)</li>
+        <li><strong>Foreground service</strong> (Android)</li>
+      </ul>
+      <p>You can grant or revoke these permissions in system settings.</p>
 
-    <section>
-      <h3>9. Children</h3>
-      <p>The App is not directed to children under the age required by local law (e.g., 13/16). We do not knowingly collect data from children.</p>
-    </section>
+      <h2 id="analytics">11) Analytics and crash reporting</h2>
+      <p>We <strong>do not</strong> embed third-party analytics or Crashlytics. If distributed via app stores, we may receive <strong>aggregated</strong> stability metrics (e.g., crash/ANR counts) from store consoles. If we later add optional analytics/crash reporting, we will update this policy and <strong>ask for consent first</strong>.</p>
 
-    <section>
-      <h3>10. Contact</h3>
-      <p>Email: <a href="mailto:support@agenzo.app">support@agenzo.app</a></p>
-    </section>
+      <h2 id="changes">12) Changes to this policy</h2>
+      <p>We may update this policy to reflect product or legal changes. We’ll revise the <strong>Effective date</strong> above and, for material updates, notify you in-app or by email. Continued use after an update means you accept the revised policy.</p>
 
-    <section>
-      <h3>11. Changes</h3>
-      <p>If we change this Policy, we will update the “Last updated” date and publish the new version here.</p>
-    </section>
-  </div>
+      <h2 id="contact">13) Contact</h2>
+      <p><strong>Controller:</strong> Cosmin Oprea (individual)<br>
+         <strong>Email:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a><br>
+         If you require a postal contact for GDPR correspondence, email us and we will provide a mailing address.</p>
+
+      <h2 id="appendix">Appendix: Summary of clarifications in v1.2</h2>
+      <ul>
+        <li><strong>Voice pipeline:</strong> Added <strong>Google Cloud Speech-to-Text</strong> (audio) and <strong>Groq</strong> (transcript + time-zone) as processors.</li>
+        <li><strong>Support channel:</strong> Disclosed automatic inclusion of UID, email, locale, time zone, platform, OS version, hostname, timestamps, and use of <strong>SendGrid</strong>.</li>
+        <li><strong>Account deletion scope:</strong> Clarified that support/feedback records and email copies are <strong>not</strong> automatically removed but can be deleted on request.</li>
+        <li><strong>On-device caches:</strong> Now explicitly mention the <strong>pending-action queue</strong> (reminder ID/action/timestamp).</li>
+      </ul>
+
+      <p style="margin-top:24px"><a href="#top">↑ Back to top</a></p>
+    </article>
+
+    <footer class="wrap">
+      <p>© <span id="y"></span> Agenzo – Smart Reminders</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
