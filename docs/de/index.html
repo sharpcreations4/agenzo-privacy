@@ -6,7 +6,9 @@
   <title>Agenzo – Smart Reminders · Datenschutzerklärung (DE)</title>
   <meta name="description" content="Datenschutzerklärung für Agenzo – Smart Reminders (DE)">
   <style>
-    :root{--bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730}
+    :root{
+      --bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730
+    }
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
@@ -37,7 +39,7 @@
   <header>
     <div class="bar">
       <div class="brand">Agenzo – Smart Reminders</div>
-      <nav aria-label="Seletor de idioma">
+      <nav aria-label="Sprachauswahl">
         <a href="https://sharpcreations4.github.io/agenzo-privacy/en/">EN</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/pt/">PT</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/es/">ES</a>
@@ -45,17 +47,16 @@
         <a href="https://sharpcreations4.github.io/agenzo-privacy/fr/">FR</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/de/" aria-current="page">DE</a>
       </nav>
-      <button class="btn print" onclick="window.print()" title="Imprimir / Guardar em PDF">🖨️ Imprimir / PDF</button>
+      <button class="btn print" onclick="window.print()" title="Drucken / Als PDF speichern">🖨️ Drucken / PDF</button>
     </div>
   </header>
-
 
   <main class="wrap">
     <article class="card">
       <h1 id="top">Datenschutzerklärung (DE)</h1>
-      <p class="meta"><strong>Gültig ab:</strong> 14. November 2025 • <strong>Version:</strong> 1.1</p>
-      <p class="meta"><strong>Verantwortlicher:</strong> Cosmin Oprea (natürliche Person) • <strong>Kontakt:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
-      <p class="meta"><em>Gilt für: Agenzo – Smart Reminders Mobile-Apps (Android/iOS) und zugehörige Support-Kanäle.</em></p>
+      <p class="meta"><strong>Gültig ab:</strong> 19. Februar 2026 • <strong>Version:</strong> 1.2</p>
+      <p class="meta"><strong>Verantwortlicher:</strong> Cosmin Oprea (Privatperson) • <strong>Kontakt:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
+      <p class="meta"><em>Gilt für: Agenzo – Smart Reminders (Android) und zugehörige Support-Kanäle.</em></p>
 
       <div class="toc">
         <strong>Inhaltsverzeichnis</strong>
@@ -64,127 +65,172 @@
           <li><a href="#data">Welche Daten wir erheben und warum</a></li>
           <li><a href="#processing">Wie wir Daten verarbeiten</a></li>
           <li><a href="#legal">Rechtsgrundlagen (DSGVO)</a></li>
-          <li><a href="#processors">Auftragsverarbeiter</a></li>
+          <li><a href="#processors">Drittanbieter/Auftragsverarbeiter</a></li>
           <li><a href="#retention">Speicherdauer</a></li>
           <li><a href="#transfers">Internationale Übermittlungen</a></li>
           <li><a href="#rights">Ihre Rechte</a></li>
           <li><a href="#security">Sicherheit</a></li>
           <li><a href="#permissions">Angeforderte Berechtigungen</a></li>
-          <li><a href="#analytics">Analyse & Absturzberichte</a></li>
+          <li><a href="#analytics">Analytics & Absturzberichte</a></li>
           <li><a href="#changes">Änderungen dieser Erklärung</a></li>
           <li><a href="#contact">Kontakt</a></li>
         </ol>
       </div>
 
       <h2 id="scope">1) Geltungsbereich</h2>
-      <p>Diese Datenschutzerklärung erläutert, welche Daten Agenzo („wir“) erhebt, wie wir sie nutzen und teilen, Ihre Wahlmöglichkeiten sowie Ihre Rechte nach geltendem Recht (z. B. DSGVO). Durch Nutzung der App stimmen Sie dieser Erklärung zu. Wenn Sie nicht einverstanden sind, beenden Sie bitte die Nutzung und kontaktieren Sie uns.</p>
+      <p>
+        Diese Datenschutzerklärung erläutert, welche Daten Agenzo („wir“, „uns“) erhebt, wie wir sie verwenden und weitergeben,
+        welche Wahlmöglichkeiten Sie haben und welche Rechte Ihnen nach geltendem Recht (z. B. DSGVO) zustehen.
+        Wenn Sie nicht einverstanden sind, nutzen Sie den Dienst bitte nicht weiter und kontaktieren Sie uns.
+      </p>
 
       <h2 id="data">2) Welche Daten wir erheben und warum</h2>
+
       <h3>Konto & Authentifizierung</h3>
-      <p><strong>Was:</strong> E-Mail-Adresse und Authentifizierungs-Tokens bei der Anmeldung (Firebase Authentication per E-Mail/Passwort oder Google-Anmeldung).<br>
-         <strong>Warum:</strong> Ihr Konto schützen, An-/Abmeldung und Passwort-Resets ermöglichen, unbefugten Zugriff verhindern.</p>
+      <p>
+        <strong>Was:</strong> E-Mail-Adresse und Authentifizierungs-Tokens bei der Anmeldung (Firebase Authentication per E-Mail/Passwort oder Google-Sign-In).<br>
+        <strong>Warum:</strong> Schutz Ihres Kontos, Anmeldung/Abmeldung, Passwort-Zurücksetzung und Verhinderung unbefugter Zugriffe.
+      </p>
 
       <h3>Erinnerungen & Aufgaben (in Ihrem Konto gespeichert)</h3>
-      <p><strong>Was:</strong> Titel, Notizen, Datum/Uhrzeit, Zeitzone, Abschlussstatus und lokale Benachrichtigungs-IDs.<br>
-         <strong>Warum:</strong> Ihren Kalender geräteübergreifend anzeigen und Benachrichtigungen planen/abbrechen.<br>
-         <em>Hinweis:</em> Vom Server zurückgegebene <strong>Sprachtranskripte</strong> werden in die <strong>Notizen</strong> der Erinnerung kopiert, damit Sie sie später lesen/bearbeiten können.</p>
+      <p>
+        <strong>Was:</strong> Titel, Notizen, Fälligkeitsdatum/-zeit, Zeitzone, Erledigt-Status sowie lokale Benachrichtigungs-Kennungen.<br>
+        <strong>Warum:</strong> Anzeige Ihrer Inhalte geräteübergreifend sowie Planen/Abbrechen lokaler Benachrichtigungen.<br>
+        <em>Hinweis:</em> Wenn Sie die Spracheingabe nutzen, kann der erkannte <strong>Transkripttext</strong> in den <strong>Notizen</strong> der Erinnerung gespeichert werden, damit Sie ihn später ansehen/bearbeiten können.
+      </p>
 
-      <h3>Standortbasierte Erinnerungen (Opt-in)</h3>
-      <p><strong>Was:</strong> Breitengrad/Längengrad, Radius, Auslösermodus (Betreten/Verlassen), Aktivieren/Deaktivieren-Flags, Bezeichnung und Zeitstempel des letzten Auslösers.<br>
-         <strong>Warum:</strong> Geofences lokal aktivieren und doppelte Auslösungen vermeiden.</p>
+      <h3>Ortsbasierte Erinnerungen (Opt-in)</h3>
+      <p>
+        <strong>Was:</strong> Gespeicherte Ortskoordinaten (Breite/Länge), Radius, Auslösemodus (Betreten/Verlassen), Bezeichnungen,
+        Aktiviert/Deaktiviert-Status und Zeitstempel der letzten Auslösung.<br>
+        <strong>Warum:</strong> Erstellung und Verwaltung ortsbasierter Erinnerungen und Vermeidung doppelter Auslösungen.
+      </p>
 
-      <h3>Gerätedaten & lokale Caches (auf Ihrem Gerät)</h3>
-      <p><strong>Was:</strong> Gewählte Sprache, Einwilligungs-/„nicht erneut fragen“-Schalter, Status der Benachrichtigungsberechtigung, zwischengespeicherte Daten geplanter Benachrichtigungen, Deep-Link-Payloads sowie eine <strong>Warteschlange ausstehender Aktionen</strong> (Erinnerungs-ID, Aktion wie Erledigt/Snooze und Zeitstempel) für Offline-Nutzung.<br>
-         <strong>Warum:</strong> Wiederholte Berechtigungsabfragen vermeiden, den richtigen Inhalt aus Benachrichtigungen öffnen und Aktionen nach Rückkehr online nachspielen.</p>
+      <h3>Ortssuche (Google Places / Maps)</h3>
+      <p>
+        <strong>Was:</strong> Der von Ihnen eingegebene Suchtext (z. B. ein Geschäftsname) und, sofern verfügbar, eine optionale <strong>Orts-/Gebietsgewichtung</strong>
+        basierend auf dem <strong>Kartenbereich/Kartenzentrum</strong> oder einem <strong>ausgewählten Punkt</strong> in der UI.<br>
+        <strong>Warum:</strong> Bessere Autocomplete-Vorschläge und Ergebnisse, die zum Bereich passen, den Sie gerade ansehen.<br>
+        <em>Wichtig:</em> Diese Gewichtung bezieht sich auf den Bereich, den Sie in der App betrachten/auswählen. Wir senden keinen kontinuierlichen „Live-Standort-Stream“ an Google.
+      </p>
 
       <h3>Spracheingabe (Opt-in)</h3>
-      <p><strong>Was:</strong> Mikrofon-Audio in einer temporären Datei, Ihre Nutzer-ID, Sprache und Zeitzone.<br>
-         <strong>Warum:</strong> Sprache in Erinnerungen/Aufgaben umwandeln (siehe <a href="#processors">§5</a> zu Auftragsverarbeitern).</p>
+      <p>
+        <strong>Was:</strong> Mikrofon-Audio, das auf Ihrem Gerät in eine temporäre Datei aufgenommen wird, sowie Ihre Sprach-/Ländereinstellung und Zeitzonen-Kontext.<br>
+        <strong>Warum:</strong> Um Sprache in Erinnerungen/Aufgaben umzuwandeln (siehe <a href="#processors">§5</a>). Die temporäre Audiodatei wird nach Abschluss der Verarbeitung vom Gerät gelöscht.
+      </p>
+
+      <h3>Gerätedaten & lokale Caches (auf Ihrem Gerät)</h3>
+      <p>
+        <strong>Was:</strong> Gewählte Sprache/Region, Einwilligungs-/„nicht erneut fragen“-Flags, Status der Benachrichtigungsberechtigung,
+        zwischengespeicherte Daten zu geplanten Benachrichtigungen, Deep-Link-Payloads sowie eine kleine Offline-Warteschlange für Aktionen
+        (z. B. Erinnerungs-ID + Aktion + Zeitstempel).<br>
+        <strong>Warum:</strong> Besseres UX, weniger wiederholte Berechtigungsabfragen, korrektes Öffnen aus Benachrichtigungen und Nachholen von Aktionen, sobald Sie wieder online sind.
+      </p>
 
       <h3>Support & Feedback</h3>
-      <p><strong>Was (automatisch angehängt):</strong> Ihre angemeldete <strong>UID</strong>, <strong>Kontomail</strong>, <strong>Sprache</strong>, <strong>Zeitzone</strong> (IANA & Offset), <strong>Plattform</strong>, <strong>OS-Version</strong>, <strong>Geräte-Hostname</strong>, <strong>App-Version</strong> (falls verfügbar) und <strong>Zeitstempel</strong> sowie Ihre Nachricht.<br>
-         <strong>Warum:</strong> Probleme diagnostizieren und wirksam antworten.</p>
+      <p>
+        <strong>Was:</strong> Wenn Sie uns per E-Mail kontaktieren, erhalten wir die Informationen, die Sie freiwillig senden.<br>
+        <strong>Diagnose (optional):</strong> Die App kann eine E-Mail-Vorlage mit hilfreichen Details <strong>vorbefüllen</strong>
+        (z. B. UID, Konto-E-Mail, Sprache, Zeitzone, Plattform, OS-Version, Gerätemodell, App-Version und Zeitstempel), um Support zu beschleunigen.
+        Sie können diesen Text vor dem Versand bearbeiten oder entfernen.<br>
+        <strong>Warum:</strong> Fehlerdiagnose und effektive Unterstützung.
+      </p>
 
-      <p><strong>Wir erheben nicht:</strong> Drittanbieter-Analytik, Werbe-IDs oder Marketing-SDK-Daten; keine kontinuierlichen Hintergrund-Standortverläufe (Geofencing läuft auf dem Gerät).</p>
+      <p>
+        <strong>Wir erheben nicht absichtlich:</strong> Werbe-IDs, Daten aus Marketing-SDKs oder eine kontinuierliche Hintergrund-Standorthistorie Ihrer Wege.
+      </p>
 
       <h2 id="processing">3) Wie wir Daten verarbeiten</h2>
       <ul>
-        <li><strong>Zentralspeicher:</strong> Erinnerungen, Aufgaben und Standort-Erinnerungen werden in <strong>Google Cloud Firestore</strong> unter Ihrer Nutzer-ID gespeichert.</li>
-        <li><strong>Benachrichtigungen:</strong> Wir planen <strong>lokale</strong> Benachrichtigungen (kein Marketing-Push). Unter Android können wir exakte Alarme anfordern und Boot-Receiver registrieren, damit Erinnerungen Neustarts überdauern.</li>
-        <li><strong>Geofencing:</strong> Läuft lokal auf Ihrem Gerät; zurückgeschrieben werden nur Auslöse-Zeitstempel.</li>
-        <li><strong>Sprach-Pipeline:</strong> Audio wird sicher hochgeladen, transkribiert, optional zusammengefasst/extrahiert; das <strong>erkannte Transkript</strong> wird zu den Notizen Ihrer Erinnerung hinzugefügt. Die temporäre Audiodatei wird nach Verarbeitung gelöscht.</li>
+        <li><strong>Kernspeicherung:</strong> Erinnerungen, Aufgaben und ortsbasierte Erinnerungen werden in <strong>Google Cloud Firestore</strong> unter Ihrer Nutzer-ID gespeichert.</li>
+        <li><strong>Benachrichtigungen:</strong> Wir planen <strong>lokale</strong> Benachrichtigungen (keine Marketing-Pushes). Unter Android können Sie optional den Modus „exakte Uhrzeit“ aktivieren; ohne diesen Modus kann es zu systembedingten Verzögerungen kommen.</li>
+        <li><strong>Geofencing:</strong> Ortsbasierte Erinnerungen werden durch Geofencing auf dem Gerät ausgelöst. Wir speichern den gespeicherten Ort und können Zeitstempel/Status der Auslösung in Ihrem Firestore-Datensatz aktualisieren (wir laden keine kontinuierlichen Standort-Samples hoch).</li>
+        <li><strong>Voice-Pipeline:</strong> Audio wird sicher an unsere Cloud Function hochgeladen, transkribiert und kann dann zur Erstellung einer Erinnerung genutzt werden. Roh-Audio wird von der App nicht in Firestore gespeichert.</li>
+        <li><strong>Offline-Cache (Firestore-Persistenz):</strong> Die App kann Firestore-Daten lokal zwischenspeichern (schnelleres Laden, Offline-Nutzung). Beim Abmelden und bei Kontolöschung löscht die App den lokalen Cache, um Rückstände zwischen Konten zu vermeiden.</li>
       </ul>
 
       <h2 id="legal">4) Rechtsgrundlagen (DSGVO)</h2>
       <ul>
-        <li><strong>Vertragserfüllung:</strong> Bereitstellung der von Ihnen angeforderten Erinnerungen, Aufgaben, Benachrichtigungen und zugehörigen Funktionen.</li>
-        <li><strong>Berechtigtes Interesse:</strong> Dienstzuverlässigkeit, Sicherheit und Betrugsprävention (z. B. Vermeidung doppelter Auslöser, Sicherstellung der Zustellung).</li>
-        <li><strong>Einwilligung:</strong> Mikrofon, präziser/Hintergrund-Standort und Benachrichtigungen sind optionale OS-Berechtigungen und jederzeit widerrufbar.</li>
-        <li><strong>Rechtliche Verpflichtung:</strong> Verarbeitung zur Einhaltung geltenden Rechts.</li>
+        <li><strong>Vertragserfüllung:</strong> Bereitstellung von Erinnerungen, Aufgaben, Benachrichtigungen und der von Ihnen angeforderten Funktionen.</li>
+        <li><strong>Berechtigte Interessen:</strong> Zuverlässigkeit, Sicherheit und Missbrauchsprävention (z. B. Vermeidung doppelter Auslösungen).</li>
+        <li><strong>Einwilligung:</strong> Mikrofon, präziser/Hintergrund-Standort und Benachrichtigungen sind Betriebssystem-Berechtigungen, die Sie jederzeit erteilen oder widerrufen können.</li>
+        <li><strong>Rechtliche Verpflichtung:</strong> Verarbeitung zur Einhaltung gesetzlicher Pflichten.</li>
       </ul>
 
-      <h2 id="processors">5) Auftragsverarbeiter (wer uns beim Betrieb der App unterstützt)</h2>
+      <h2 id="processors">5) Drittanbieter/Auftragsverarbeiter (wer uns beim Betrieb unterstützt)</h2>
       <ol>
-        <li><strong>Google Firebase (Google LLC)</strong> — Authentifizierung und <strong>Cloud Firestore</strong> zur Speicherung Ihrer Erinnerungen, Aufgaben und Standort-Einträge.</li>
-        <li><strong>Google Cloud Speech-to-Text</strong> — Verarbeitet von Ihnen über Spracheingabe übermittelte <strong>Audio-Clips</strong> zu Transkripten.</li>
-        <li><strong>Groq (Llama API)</strong> — Erhält <strong>das Transkript und Ihren Zeitzonen-Kontext</strong> (nicht das Roh-Audio), um aus Sprache Erinnerungs-/Aufgabendetails zu extrahieren.</li>
-        <li><strong>Google Maps Platform / Places API</strong> — Kartenrendering, Autovervollständigung und Geokodierung für Standort-Erinnerungen. Anfragen können Ihren Suchtext und grobe Koordinaten enthalten.</li>
-        <li><strong>SendGrid (Twilio SendGrid)</strong> — Übermittelt Support-/Feedback-E-Mails; speichert übliche E-Mail-Metadaten und Inhalte für Zustellung/Diagnostik.</li>
-        <li><strong>Plattform-Plugins</strong> (Geolocator, Geofencing/Vordergrund-Dienst, lokale Benachrichtigungen) — Arbeiten <strong>auf dem Gerät</strong>; sie <strong>übermitteln</strong> Ihre Daten <strong>nicht</strong> an die Anbieter.</li>
+        <li><strong>Google Firebase (Google LLC)</strong> — Authentifizierung und <strong>Cloud Firestore</strong>-Speicherung Ihrer Erinnerungen, Aufgaben und Orts-Datensätze.</li>
+        <li><strong>Google Maps Platform / Places API</strong> — Kartenanzeige und Place-Autocomplete/Details für ortsbasierte Erinnerungen. Anfragen können Suchtext und optional eine Gebiets-/Punktgewichtung (Kartenzentrum/Auswahl) enthalten.</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — Verarbeitung von <strong>Audio-Clips</strong>, die Sie über die Spracheingabe senden, um Transkripte zu erstellen.</li>
+        <li><strong>Groq (LLM-API)</strong> — Erhält <strong>Transkripttext</strong> (nicht Roh-Audio) sowie Zeitzonen-Kontext, um aus Sprache eine strukturierte Erinnerung/Aufgabe abzuleiten.</li>
+        <li><strong>Ihr E-Mail-Anbieter</strong> (wenn Sie Support kontaktieren) — Verarbeitet E-Mails, die Sie an uns senden, gemäß den Bedingungen und Datenschutzpraktiken Ihres Anbieters.</li>
       </ol>
-      <p>Wir <strong>verkaufen</strong> oder vermieten Ihre Daten nicht. Eine Weitergabe erfolgt nur an diese Auftragsverarbeiter oder wenn gesetzlich vorgeschrieben.</p>
+      <p>
+        Wir <strong>verkaufen</strong> oder <strong>vermieten</strong> Ihre Daten nicht. Wir geben sie nur an diese Auftragsverarbeiter weiter oder wenn dies gesetzlich erforderlich ist.
+      </p>
 
       <h2 id="retention">6) Speicherdauer</h2>
       <ul>
-        <li><strong>Erinnerungen, Aufgaben, Standort-Erinnerungen:</strong> Bis zur Löschung durch Sie oder zur Kontolöschung.</li>
-        <li><strong>Abgeschlossene Einträge:</strong> Für den Verlauf gespeichert, sofern Sie sie nicht löschen.</li>
-        <li><strong>Sprach-Audiodateien (auf dem Gerät):</strong> Unmittelbar nach Serverantwort gelöscht.</li>
-        <li><strong>Sprachtranskripte:</strong> Verbleiben in den <strong>Notizen</strong> der Erinnerung, bis Sie sie bearbeiten oder löschen.</li>
-        <li><strong>Geräte-Caches & Warteschlange ausstehender Aktionen:</strong> Nur auf Ihrem Gerät; entfernt beim Löschen der App-Daten oder Deinstallation.</li>
-        <li><strong>Support/Feedback:</strong> In Firestore gespeichert und via SendGrid versandt; zur Bearbeitung und Prüfung Ihrer Anfrage aufbewahrt. <strong>Wird nicht automatisch</strong> bei Kontolöschung entfernt — mailen Sie uns zur Löschung dieser Support-Datensätze.</li>
-        <li><strong>System-/Betriebsprotokolle (Anbieter):</strong> Von den Auftragsverarbeitern gemäß deren Richtlinien zu Sicherheits-/Diagnosezwecken aufbewahrt.</li>
+        <li><strong>Erinnerungen, Aufgaben, ortsbasierte Erinnerungen:</strong> Bis Sie sie löschen oder Ihr Konto löschen.</li>
+        <li><strong>Erledigte Einträge:</strong> Für den Verlauf, sofern Sie sie nicht löschen.</li>
+        <li><strong>Voice-Audiodateien (auf dem Gerät):</strong> Werden nach Abschluss der Verarbeitung gelöscht.</li>
+        <li><strong>Voice-Transkripte:</strong> Können in den <strong>Notizen</strong> der Erinnerung verbleiben, bis Sie sie bearbeiten oder löschen.</li>
+        <li><strong>Lokale Caches (Firestore-Persistenz):</strong> Auf Ihrem Gerät für Offline-/Schnellzugriff; wird beim Abmelden und bei Kontolöschung gelöscht und kann außerdem durch „App-Daten löschen“ oder Deinstallation entfernt werden.</li>
+        <li><strong>Support-E-Mails:</strong> Werden in unserem Posteingang so lange aufbewahrt, wie dies zur Bearbeitung Ihres Anliegens erforderlich ist. Kopien in Ihrem Postausgang/Sent-Ordner werden von Ihrem E-Mail-Anbieter verwaltet.</li>
+        <li><strong>System-/Betriebsprotokolle (Anbieter):</strong> Werden von den Auftragsverarbeitern gemäß deren Richtlinien zu Sicherheits-/Diagnosezwecken gespeichert.</li>
       </ul>
 
       <h2 id="transfers">7) Internationale Übermittlungen</h2>
-      <p>Daten, die von Google, Groq und SendGrid verarbeitet werden, können in der EU und/oder in anderen Ländern (einschließlich USA) verarbeitet werden. Diese Anbieter nutzen anerkannte Transfermechanismen (z. B. Standardvertragsklauseln). Wir wenden die hier beschriebenen Schutzmaßnahmen unabhängig vom Verarbeitungsort an.</p>
+      <p>
+        Daten, die von Google und Groq verarbeitet werden, können in der EU und/oder in anderen Ländern (einschließlich der USA) verarbeitet werden.
+        Diese Anbieter unterstützen anerkannte Übermittlungsmechanismen (z. B. Standardvertragsklauseln).
+        Wir wenden die hier beschriebenen Schutzmaßnahmen unabhängig vom Verarbeitungsort an.
+      </p>
 
       <h2 id="rights">8) Ihre Rechte</h2>
-      <p>Nach Maßgabe des Rechts können Sie Ihre Daten <strong>einsehen</strong>, <strong>berichtigen</strong>, <strong>löschen</strong>, die Verarbeitung <strong>einschränken</strong>, <strong>widersprechen</strong> oder die Daten <strong>übertragen</strong> lassen.</p>
+      <p>Vorbehaltlich des geltenden Rechts können Sie Ihre Daten <strong>einsehen</strong>, <strong>berichtigen</strong>, <strong>löschen</strong>, die Verarbeitung <strong>einschränken</strong>, <strong>widersprechen</strong> oder eine <strong>Datenübertragbarkeit</strong> verlangen.</p>
       <ul>
-        <li><strong>Löschung in der App:</strong> Durch das Löschen Ihres <strong>Kontos</strong> werden Ihre <strong>Erinnerungen, Aufgaben und Standort-Erinnerungen</strong> aus Firestore <strong>sofort</strong> entfernt.
-          <br><em>Nicht automatisch gelöscht:</em> Support-/Feedback-Einsendungen und E-Mail-Kopien (SendGrid/Outbox) sowie Anbieter-Logs. Kontaktieren Sie uns zur Löschung; wir kommen dem nach, soweit keine Aufbewahrungspflicht besteht (z. B. zur Streitbeilegung oder gesetzlichen Pflichten).</li>
+        <li><strong>Löschung in der App:</strong> Wenn Sie Ihr <strong>Konto</strong> löschen, werden Ihre Erinnerungen, Aufgaben und ortsbasierte Erinnerungen aus Firestore entfernt.</li>
         <li><strong>Berechtigungen:</strong> Sie können Standort/Mikrofon/Benachrichtigungen jederzeit in den Systemeinstellungen widerrufen (Funktionen können dann nicht mehr funktionieren).</li>
-        <li><strong>Weitere Anfragen (Auskunft/Export etc.):</strong> Schreiben Sie an <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Eine Identitätsprüfung kann erforderlich sein.</li>
+        <li><strong>Weitere Anfragen:</strong> E-Mail an <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Wir können zur Identitätsprüfung Rückfragen stellen.</li>
       </ul>
 
       <h2 id="security">9) Sicherheit</h2>
       <ul>
-        <li>Kontosicherheit über Firebase Authentication; nutzerbezogene Zugriffskontrolle über Firestore-Sicherheitsregeln.</li>
-        <li>Alle App-Server-Verbindungen nutzen HTTPS/TLS.</li>
-        <li>Gerätedaten befinden sich in der Plattform-Sandbox; temporäre Sprachdateien liegen nur in geschützten App-Verzeichnissen.</li>
-        <li>Zugriff auf Produktivdaten ist auf notwendige Operationen beschränkt. Halten Sie Ihr OS aktuell und schützen Sie Ihr Gerät.</li>
+        <li>Kontosicherheit über Firebase Authentication; Zugriffskontrolle pro Nutzer durch Firestore-Sicherheitsregeln.</li>
+        <li>Kommunikation App↔Server über HTTPS/TLS.</li>
+        <li>On-Device-Daten befinden sich in der App-Sandbox; temporäre Voice-Dateien liegen nur in geschützten App-Verzeichnissen.</li>
+        <li>Halten Sie Ihr Betriebssystem aktuell und schützen Sie Ihr Gerät (z. B. Bildschirmsperre).</li>
       </ul>
 
-      <h2 id="permissions">10) Angeforderte Berechtigungen (Android/iOS)</h2>
+      <h2 id="permissions">10) Angeforderte Berechtigungen (Android)</h2>
       <ul>
-        <li><strong>Standort</strong> (ungefähr/genau; ggf. wird „Immer erlauben“ angefordert)</li>
-        <li><strong>Aktivitäts­erkennung</strong> (Android)</li>
-        <li><strong>Mikrofon</strong></li>
-        <li><strong>Benachrichtigungen / Exakte Alarme</strong> (Android)</li>
-        <li><strong>Vordergrunddienst</strong> (Android)</li>
+        <li><strong>Benachrichtigungen</strong> (Android 13+ Laufzeitberechtigung) — um Erinnerungshinweise anzuzeigen.</li>
+        <li><strong>Alarme & Erinnerungen (Exakte Alarme)</strong> (Android, optional) — nur wenn Sie den Modus „exakte Uhrzeit“ für präzisere Zeit-Erinnerungen aktivieren.</li>
+        <li><strong>Standort</strong> (ungefähr/präzise; „Immer zulassen“ kann angefordert werden) — für ortsbasierte Erinnerungen (Geofences), auch wenn die App geschlossen ist.</li>
+        <li><strong>Mikrofon</strong> (optional) — nur wenn Sie die Spracheingabe nutzen.</li>
+        <li><strong>Foreground-Service</strong> (Android) — für Kompatibilität mit Hintergrundbetrieb auf einigen Geräten/OS-Versionen deklariert.</li>
       </ul>
-      <p>Sie können diese Berechtigungen in den Systemeinstellungen erteilen oder widerrufen.</p>
+      <p>Sie können diese Berechtigungen jederzeit in den Systemeinstellungen erteilen oder widerrufen. Wenn Sie sie verweigern, funktionieren die entsprechenden Features ggf. nicht.</p>
 
-      <h2 id="analytics">11) Analyse & Absturzberichte</h2>
-      <p>Wir <strong>integrieren</strong> keine Drittanbieter-Analytik und kein Crashlytics. Bei Vertrieb über App-Stores können wir <strong>aggregierte</strong> Stabilitätsmetriken (z. B. Crash-/ANR-Zahlen) aus den Store-Konsolen erhalten. Falls wir später optionale Analyse/Crash-Berichte hinzufügen, aktualisieren wir diese Erklärung und <strong>holen zuvor Ihre Einwilligung ein</strong>.</p>
+      <h2 id="analytics">11) Analytics & Absturzberichte</h2>
+      <p>
+        Wir verwenden <strong>keine</strong> Drittanbieter-Analytics oder Crashlytics-SDKs in der App.
+        Wenn die App über App Stores verteilt wird, können wir <strong>aggregierte</strong> Stabilitätsmetriken (z. B. Crash-/ANR-Zahlen) aus den Store-Konsolen erhalten.
+        Falls wir später optionale Analytics/Crash-Berichte hinzufügen, aktualisieren wir diese Erklärung.
+      </p>
 
       <h2 id="changes">12) Änderungen dieser Erklärung</h2>
-      <p>Wir können diese Erklärung an Produkt- oder Rechtsänderungen anpassen. Wir aktualisieren das <strong>Gültig-ab-Datum</strong> oben und informieren bei wesentlichen Änderungen in der App oder per E-Mail. Die weitere Nutzung nach einer Aktualisierung gilt als Zustimmung zur überarbeiteten Fassung.</p>
+      <p>
+        Wir können diese Erklärung aktualisieren, um Produkt- oder Rechtsänderungen abzubilden. Das <strong>Gültig ab</strong>-Datum oben wird angepasst;
+        bei wesentlichen Änderungen informieren wir Sie in der App oder per E-Mail.
+        Die weitere Nutzung nach einem Update bedeutet, dass Sie die aktualisierte Erklärung akzeptieren.
+      </p>
 
       <h2 id="contact">13) Kontakt</h2>
-      <p><strong>Verantwortlicher:</strong> Cosmin Oprea (natürliche Person)<br>
-         <strong>E-Mail:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a><br>
-         Für eine Postadresse zur DSGVO-Korrespondenz schreiben Sie uns bitte; wir teilen Ihnen eine Anschrift mit.</p>
+      <p><strong>Verantwortlicher:</strong> Cosmin Oprea (Privatperson)<br>
+         <strong>E-Mail:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
       <p style="margin-top:24px"><a href="#top">↑ Nach oben</a></p>
     </article>
 
