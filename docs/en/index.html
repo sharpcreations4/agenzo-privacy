@@ -39,7 +39,7 @@
   <header>
     <div class="bar">
       <div class="brand">Agenzo – Smart Reminders</div>
-      <nav aria-label="Seletor de idioma">
+      <nav aria-label="Language selector">
         <a href="https://sharpcreations4.github.io/agenzo-privacy/en/" aria-current="page">EN</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/pt/">PT</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/es/">ES</a>
@@ -47,17 +47,16 @@
         <a href="https://sharpcreations4.github.io/agenzo-privacy/fr/">FR</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/de/">DE</a>
       </nav>
-      <button class="btn print" onclick="window.print()" title="Imprimir / Guardar em PDF">🖨️ Imprimir / PDF</button>
+      <button class="btn print" onclick="window.print()" title="Print / Save as PDF">🖨️ Print / PDF</button>
     </div>
   </header>
-
 
   <main class="wrap">
     <article class="card">
       <h1 id="top">Privacy Policy (EN)</h1>
-      <p class="meta"><strong>Effective date:</strong> 14 November 2025 • <strong>Version:</strong> 1.1</p>
+      <p class="meta"><strong>Effective date:</strong> 19 February 2026 • <strong>Version:</strong> 1.2</p>
       <p class="meta"><strong>Controller:</strong> Cosmin Oprea (individual) • <strong>Contact:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
-      <p class="meta"><em>Applies to: Agenzo – Smart Reminders mobile apps (Android/iOS) and related support channels.</em></p>
+      <p class="meta"><em>Applies to: Agenzo – Smart Reminders (Android) and related support channels.</em></p>
 
       <div class="toc">
         <strong>Table of contents</strong>
@@ -79,114 +78,152 @@
       </div>
 
       <h2 id="scope">1) Scope</h2>
-      <p>This Privacy Policy explains what data Agenzo (“we”, “us”) collects, how we use and share it, your choices, and your rights under applicable law (e.g., GDPR). By using the app, you agree to this policy. If you disagree, please stop using the service and contact us.</p>
+      <p>
+        This Privacy Policy explains what data Agenzo (“we”, “us”) collects, how we use and share it, your choices,
+        and your rights under applicable law (e.g., GDPR). If you do not agree, please stop using the service and contact us.
+      </p>
 
       <h2 id="data">2) Data we collect and why</h2>
+
       <h3>Account & authentication</h3>
-      <p><strong>What:</strong> Email address and authentication tokens when you sign in (Firebase Authentication via email/password or Google Sign-In).<br>
-         <strong>Why:</strong> Secure your account, enable sign-in/out and password resets, and prevent unauthorized access.</p>
+      <p>
+        <strong>What:</strong> Email address and authentication tokens when you sign in (Firebase Authentication via email/password or Google Sign-In).<br>
+        <strong>Why:</strong> Secure your account, enable sign-in/out and password resets, and prevent unauthorized access.
+      </p>
 
       <h3>Reminders & tasks (saved to your account)</h3>
-      <p><strong>What:</strong> Titles, notes, due date/time, time zone, completion status, and local notification IDs.<br>
-         <strong>Why:</strong> Show your agenda across devices and schedule/cancel notifications.<br>
-         <em>Note:</em> <strong>Voice transcripts</strong> returned by our server are copied into reminder <strong>notes</strong> so you can read/edit them later.</p>
+      <p>
+        <strong>What:</strong> Titles, notes, due date/time, time zone, completion status, and local notification identifiers.<br>
+        <strong>Why:</strong> Show your content across devices and schedule/cancel local notifications.<br>
+        <em>Note:</em> If you use voice input, the recognized <strong>transcript text</strong> can be stored in your reminder <strong>notes</strong> so you can view/edit it later.
+      </p>
 
       <h3>Location reminders (opt-in)</h3>
-      <p><strong>What:</strong> Latitude/longitude, radius, trigger mode (enter/exit), enable/disable flags, label, and last-triggered timestamp.<br>
-         <strong>Why:</strong> Arm geofences locally and avoid duplicate triggers.</p>
+      <p>
+        <strong>What:</strong> Saved place coordinates (latitude/longitude), radius, trigger mode (enter/exit), labels, enable/disable state, and last-triggered timestamps.<br>
+        <strong>Why:</strong> Create and manage location-based reminders and prevent duplicate triggers.
+      </p>
 
-      <h3>Device data & local caches (on your device)</h3>
-      <p><strong>What:</strong> Selected locale, consent/“don’t ask again” toggles, notification permission state, cached scheduled-notification data, deep-link payloads, and a <strong>pending-action queue</strong> (reminder ID, action such as Done/Snooze, and timestamp) for offline use.<br>
-         <strong>Why:</strong> Avoid re-asking for permissions, reopen the right content from notifications, and replay actions when you come back online.</p>
+      <h3>Place search (Google Places / Maps)</h3>
+      <p>
+        <strong>What:</strong> The search text you type (e.g., a store name) and, when available, an optional <strong>location bias</strong> based on the <strong>map area/center</strong> or a <strong>selected point</strong> in the UI.<br>
+        <strong>Why:</strong> Provide better autocomplete suggestions and place results relevant to the area you are browsing.<br>
+        <em>Important:</em> This bias is about the area you are viewing/choosing in the app. We do not send a continuous “live location stream” to Google.
+      </p>
 
       <h3>Voice input (opt-in)</h3>
-      <p><strong>What:</strong> Microphone audio recorded to a temporary file, your user ID, locale, and time zone.<br>
-         <strong>Why:</strong> Convert speech to reminders/tasks (see <a href="#processors">§5</a> for processors).</p>
+      <p>
+        <strong>What:</strong> Microphone audio recorded to a temporary file on your device, plus your locale and time zone context.<br>
+        <strong>Why:</strong> Convert speech into reminders/tasks (see <a href="#processors">§5</a>). The temporary audio file is deleted from the device after processing completes.
+      </p>
+
+      <h3>Device data & local caches (on your device)</h3>
+      <p>
+        <strong>What:</strong> Selected locale, consent/“don’t ask again” flags, notification permission state, cached scheduled-notification data,
+        deep-link payloads, and a small pending-action queue for offline use (e.g., reminder ID + action + timestamp).<br>
+        <strong>Why:</strong> Improve UX, avoid re-asking permissions, reopen the correct screen from notifications, and replay actions when you come back online.
+      </p>
 
       <h3>Support & feedback</h3>
-      <p><strong>What (automatically attached):</strong> Your signed-in <strong>UID</strong>, <strong>account email</strong>, <strong>locale</strong>, <strong>time zone</strong> (IANA & offset), <strong>platform</strong>, <strong>OS version</strong>, <strong>device hostname</strong>, <strong>app version</strong> (if available), and <strong>timestamp</strong>, plus the message you type.<br>
-         <strong>Why:</strong> Diagnose issues and respond effectively.</p>
+      <p>
+        <strong>What:</strong> If you contact us by email, we receive the information you choose to send.<br>
+        <strong>Diagnostics (optional):</strong> The app may <strong>prefill</strong> an email draft with helpful details (such as UID, account email, locale, time zone, platform, OS version, device model, app version, and timestamp) to speed up support. You can edit or remove this text before sending.<br>
+        <strong>Why:</strong> Diagnose issues and respond effectively.
+      </p>
 
-      <p><strong>We do not collect:</strong> third-party analytics, advertising IDs, or marketing SDK data; continuous background location trails (geofencing runs on-device).</p>
+      <p>
+        <strong>We do not intentionally collect:</strong> advertising IDs, marketing SDK data, or a continuous background location history of where you go.
+      </p>
 
       <h2 id="processing">3) How we process data</h2>
       <ul>
         <li><strong>Core storage:</strong> Reminders, tasks, and location reminders are stored in <strong>Google Cloud Firestore</strong> under your user ID.</li>
-        <li><strong>Notifications:</strong> We schedule <strong>local</strong> notifications (no marketing pushes). On Android, we may request exact alarms and register boot receivers so reminders persist after restarts.</li>
-        <li><strong>Geofencing:</strong> Runs locally on your device; only trigger timestamps are written back.</li>
-        <li><strong>Voice pipeline:</strong> Audio is uploaded securely, transcribed, optionally summarized/extracted, and the <strong>recognized transcript</strong> is added to your reminder notes. The temporary audio file on your device is deleted after processing.</li>
+        <li><strong>Notifications:</strong> We schedule <strong>local</strong> notifications (no marketing push notifications). On Android, you may optionally enable “exact time” reminders; if not enabled, time reminders may be delivered with OS-managed timing variance.</li>
+        <li><strong>Geofencing:</strong> Location reminders are triggered by on-device geofencing. We store the saved place, and we may update trigger timestamps/state in your Firestore record (we do not upload continuous location samples).</li>
+        <li><strong>Voice pipeline:</strong> Audio is uploaded securely to our Cloud Function for transcription, then transcript text can be used to create a reminder. Raw audio is not stored by the app in Firestore.</li>
+        <li><strong>Offline cache (Firestore persistence):</strong> The app may cache Firestore data on your device to support faster loading and offline use. On sign-out and account deletion, the app clears local cache to prevent cross-account residue.</li>
       </ul>
 
       <h2 id="legal">4) Legal bases (GDPR)</h2>
       <ul>
         <li><strong>Contractual necessity:</strong> Provide reminders, tasks, notifications, and related features you request.</li>
-        <li><strong>Legitimate interests:</strong> Service reliability, security, and fraud prevention (e.g., avoiding duplicate triggers, ensuring delivery accuracy).</li>
-        <li><strong>Consent:</strong> Microphone, precise/background location, and notifications are optional OS-level permissions you can withdraw at any time.</li>
+        <li><strong>Legitimate interests:</strong> Service reliability, security, and fraud prevention (e.g., avoiding duplicate triggers).</li>
+        <li><strong>Consent:</strong> Microphone, precise/background location, and notifications are OS-level permissions you can grant or withdraw at any time.</li>
         <li><strong>Legal obligation:</strong> We may process data to comply with applicable law.</li>
       </ul>
 
       <h2 id="processors">5) Third-party processors (who helps us operate the app)</h2>
       <ol>
-        <li><strong>Google Firebase (Google LLC)</strong> — Authentication and <strong>Cloud Firestore</strong> storage for your reminders, tasks, and location records.</li>
+        <li><strong>Google Firebase (Google LLC)</strong> — Authentication and <strong>Cloud Firestore</strong> storage for your reminders, tasks, and location reminder records.</li>
+        <li><strong>Google Maps Platform / Places API</strong> — Map rendering and place autocomplete/details for location reminders. Requests may include your search text and an optional area/point bias (map center/selection).</li>
         <li><strong>Google Cloud Speech-to-Text</strong> — Processes <strong>audio clips</strong> you submit via Voice input to produce transcripts.</li>
-        <li><strong>Groq (Llama API)</strong> — Receives <strong>the transcript and your time-zone context</strong> (not the raw audio) to extract reminder/task details from speech.</li>
-        <li><strong>Google Maps Platform / Places API</strong> — Map rendering, autocomplete, and geocoding for location reminders. Requests may include your search text and coarse coordinates.</li>
-        <li><strong>SendGrid (Twilio SendGrid)</strong> — Transmits support/feedback emails; stores typical email metadata and message content for delivery/diagnostics.</li>
-        <li><strong>Platform plugins</strong> (Geolocator, geofencing/foreground-service frameworks, local notifications) — Operate <strong>on-device</strong>; they do <strong>not</strong> transmit your data to their publishers.</li>
+        <li><strong>Groq (LLM API)</strong> — Receives <strong>transcript text</strong> (not raw audio) plus time-zone context to extract reminder/task structure from speech.</li>
+        <li><strong>Your email provider</strong> (when you contact support) — Your email service processes messages you send to us, subject to your provider’s terms and privacy practices.</li>
       </ol>
-      <p>We <strong>do not</strong> sell or rent your data. We share it only with these processors or where required by law.</p>
+      <p>
+        We <strong>do not</strong> sell or rent your data. We share it only with these processors or where required by law.
+      </p>
 
       <h2 id="retention">6) Data retention</h2>
       <ul>
         <li><strong>Reminders, tasks, location reminders:</strong> Kept until you delete them or delete your account.</li>
         <li><strong>Completed items:</strong> Kept for history unless you delete them.</li>
-        <li><strong>Voice audio files (on device):</strong> Deleted immediately after the server responds.</li>
-        <li><strong>Voice transcripts:</strong> Persist in your reminder <strong>notes</strong> until you edit or delete them.</li>
-        <li><strong>Device caches & pending-action queue:</strong> Reside only on your device; removed when you clear app data or uninstall.</li>
-        <li><strong>Support/feedback:</strong> Stored in Firestore and sent via SendGrid; retained to handle and audit your request. <strong>Not automatically removed</strong> when you delete your account—email us to request deletion of support records.</li>
+        <li><strong>Voice audio files (on device):</strong> Deleted after processing completes.</li>
+        <li><strong>Voice transcripts:</strong> May persist inside reminder <strong>notes</strong> until you edit or delete them.</li>
+        <li><strong>Local caches (Firestore persistence):</strong> Stored on your device for offline/fast access; cleared on sign-out and account deletion, and also removable by clearing app data or uninstalling.</li>
+        <li><strong>Support emails:</strong> Retained in our inbox as needed to handle your request. We cannot automatically remove copies from your sent mailbox/outbox; you control those via your email provider.</li>
         <li><strong>System/operational logs (providers):</strong> Retained by processors per their policies for security/diagnostics.</li>
       </ul>
 
       <h2 id="transfers">7) International transfers</h2>
-      <p>Data handled by Google, Groq, and SendGrid may be processed in the EU and/or other countries (including the US). These providers support recognized transfer mechanisms (e.g., Standard Contractual Clauses). We apply the protections described here regardless of processing location.</p>
+      <p>
+        Data handled by Google and Groq may be processed in the EU and/or other countries (including the US).
+        These providers support recognized transfer mechanisms (e.g., Standard Contractual Clauses).
+        We apply the protections described here regardless of processing location.
+      </p>
 
       <h2 id="rights">8) Your rights</h2>
       <p>Subject to law, you may <strong>access</strong>, <strong>rectify</strong>, <strong>delete</strong>, <strong>restrict</strong>, <strong>object</strong>, or <strong>port</strong> your data.</p>
       <ul>
-        <li><strong>In-app deletion:</strong> Deleting your <strong>account</strong> removes your <strong>reminders, tasks, and location reminders</strong> from Firestore <strong>immediately</strong>.
-          <br><em>Not automatically deleted:</em> support/feedback submissions and email copies (SendGrid/outbox), and provider logs. Contact us to request their deletion; we’ll comply unless we must retain them (e.g., to resolve disputes or meet legal obligations).</li>
+        <li><strong>In-app deletion:</strong> Deleting your <strong>account</strong> removes your reminders, tasks, and location reminders from Firestore.</li>
         <li><strong>Permissions:</strong> Revoke location/microphone/notifications in system settings at any time (features may stop working).</li>
-        <li><strong>Other requests (access/export, etc.):</strong> Email <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. We may need to verify your identity.</li>
+        <li><strong>Other requests:</strong> Email <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. We may need to verify your identity.</li>
       </ul>
 
       <h2 id="security">9) Security</h2>
       <ul>
         <li>Account security via Firebase Authentication; per-user access control via Firestore security rules.</li>
-        <li>All app-server communications use HTTPS/TLS.</li>
+        <li>App-server communications use HTTPS/TLS.</li>
         <li>On-device data lives in the platform sandbox; temporary voice files are kept only in protected app directories.</li>
-        <li>Access to production data is limited to essential operations. Keep your OS updated and protect your device.</li>
+        <li>Keep your OS updated and protect your device (screen lock, etc.).</li>
       </ul>
 
-      <h2 id="permissions">10) Permissions we request (Android/iOS)</h2>
+      <h2 id="permissions">10) Permissions we request (Android)</h2>
       <ul>
-        <li><strong>Location</strong> (approximate/precise; “Allow always” may be requested)</li>
-        <li><strong>Activity Recognition</strong> (Android)</li>
-        <li><strong>Microphone</strong></li>
-        <li><strong>Notifications / Exact alarms</strong> (Android)</li>
-        <li><strong>Foreground service</strong> (Android)</li>
+        <li><strong>Notifications</strong> (Android 13+ runtime permission) — to display reminder alerts.</li>
+        <li><strong>Alarms & reminders (Exact alarms)</strong> (Android, optional) — only if you enable “exact time” mode for more precise time reminders.</li>
+        <li><strong>Location</strong> (approximate/precise; “Allow all the time” may be requested) — for location-based reminders (geofences) when the app is closed.</li>
+        <li><strong>Microphone</strong> (optional) — only if you use voice input.</li>
+        <li><strong>Foreground service</strong> (Android) — declared for compatibility with background operation on some devices/OS versions.</li>
       </ul>
-      <p>You can grant or revoke these permissions in system settings.</p>
+      <p>You can grant or revoke these permissions in system settings. If you deny them, related features may not work.</p>
 
       <h2 id="analytics">11) Analytics and crash reporting</h2>
-      <p>We <strong>do not</strong> embed third-party analytics or Crashlytics. If distributed via app stores, we may receive <strong>aggregated</strong> stability metrics (e.g., crash/ANR counts) from store consoles. If we later add optional analytics/crash reporting, we will update this policy and <strong>ask for consent first</strong>.</p>
+      <p>
+        We <strong>do not</strong> embed third-party analytics or Crashlytics SDKs in the app.
+        If distributed via app stores, we may receive <strong>aggregated</strong> stability metrics (e.g., crash/ANR counts) from store consoles.
+        If we later add optional analytics/crash reporting, we will update this policy.
+      </p>
 
       <h2 id="changes">12) Changes to this policy</h2>
-      <p>We may update this policy to reflect product or legal changes. We’ll revise the <strong>Effective date</strong> above and, for material updates, notify you in-app or by email. Continued use after an update means you accept the revised policy.</p>
+      <p>
+        We may update this policy to reflect product or legal changes. We’ll revise the <strong>Effective date</strong> above and, for material updates, notify you in-app or by email.
+        Continued use after an update means you accept the revised policy.
+      </p>
 
       <h2 id="contact">13) Contact</h2>
       <p><strong>Controller:</strong> Cosmin Oprea (individual)<br>
-         <strong>Email:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a><br>
-         If you require a postal contact for GDPR correspondence, email us and we will provide a mailing address.</p>
+         <strong>Email:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
       <p style="margin-top:24px"><a href="#top">↑ Back to top</a></p>
     </article>
 
