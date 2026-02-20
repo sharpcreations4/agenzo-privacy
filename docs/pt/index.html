@@ -6,17 +6,89 @@
   <title>Agenzo – Smart Reminders · Política de Privacidade (PT)</title>
   <meta name="description" content="Política de Privacidade da Agenzo – Smart Reminders (PT)">
   <style>
-    :root{--bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730}
+    :root{
+      --bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730
+    }
     html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1000px;margin:0 auto;padding:24px}
     header{position:sticky;top:0;background:rgba(11,13,16,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:2}
-    .bar{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:12px 24px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    nav a{margin-right:12px;color:var(--muted)}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer}
+
+    /* UPDATED HEADER LAYOUT (3 zones) */
+    .bar{
+      display:grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items:center;
+      gap:16px;
+      padding:12px 24px
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:320px
+    }
+    nav.lang{
+      justify-self:center;
+      display:flex;
+      gap:10px;
+      align-items:center
+    }
+    nav.lang a{
+      margin:0;
+      color:var(--muted);
+      font-weight:600;
+      font-size:.92rem;
+      padding:6px 8px;
+      border-radius:8px
+    }
+    nav.lang a[aria-current="page"]{
+      color:var(--text);
+      background:rgba(63,167,255,.10);
+      border:1px solid rgba(63,167,255,.20)
+    }
+    .actions{
+      justify-self:end;
+      display:flex;
+      gap:10px;
+      align-items:center
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius:8px;
+      background:var(--card);
+      color:var(--text);
+      cursor:pointer;
+      white-space:nowrap
+    }
     .btn:hover{border-color:#2b3542}
+    .btn.danger{
+      border-color:rgba(255,90,90,.35);
+      background:rgba(255,90,90,.08)
+    }
+    .btn.danger:hover{
+      border-color:rgba(255,90,90,.55)
+    }
+
+    /* Mobile: stack without making header feel huge */
+    @media (max-width: 720px){
+      .bar{
+        grid-template-columns: 1fr;
+        justify-items:center;
+        gap:10px
+      }
+      .brand{max-width:100%}
+      .actions{justify-self:center}
+    }
+
     .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:24px}
     h1{font-size:1.8rem;margin:0 0 8px}
     h2{margin-top:28px;font-size:1.15rem}
@@ -37,7 +109,8 @@
   <header>
     <div class="bar">
       <div class="brand">Agenzo – Smart Reminders</div>
-      <nav aria-label="Seletor de idioma">
+
+      <nav class="lang" aria-label="Seletor de idioma">
         <a href="https://sharpcreations4.github.io/agenzo-privacy/en/">EN</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/pt/" aria-current="page">PT</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/es/">ES</a>
@@ -45,16 +118,22 @@
         <a href="https://sharpcreations4.github.io/agenzo-privacy/fr/">FR</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/de/">DE</a>
       </nav>
-      <button class="btn print" onclick="window.print()" title="Imprimir / Guardar em PDF">🖨️ Imprimir / PDF</button>
+
+      <div class="actions">
+        <a class="btn danger" href="https://sharpcreations4.github.io/agenzo-privacy/account-deletion/pt/" title="Apagar conta">
+          🗑️ Apagar conta
+        </a>
+        <button class="btn print" onclick="window.print()" title="Imprimir / Guardar em PDF">🖨️ Imprimir / PDF</button>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
     <article class="card">
       <h1 id="top">Política de Privacidade (PT)</h1>
-      <p class="meta"><strong>Data de entrada em vigor:</strong> 14 de novembro de 2025 • <strong>Versão:</strong> 1.1</p>
+      <p class="meta"><strong>Data de entrada em vigor:</strong> 19 de fevereiro de 2026 • <strong>Versão:</strong> 1.2</p>
       <p class="meta"><strong>Responsável pelo tratamento:</strong> Cosmin Oprea (pessoa singular) • <strong>Contacto:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
-      <p class="meta"><em>Aplica-se a: aplicações móveis Agenzo – Smart Reminders (Android/iOS) e canais de suporte relacionados.</em></p>
+      <p class="meta"><em>Aplica-se a: Agenzo – Smart Reminders (Android) e canais de suporte relacionados.</em></p>
 
       <div class="toc">
         <strong>Índice</strong>
@@ -62,128 +141,180 @@
           <li><a href="#scope">Âmbito</a></li>
           <li><a href="#data">Dados que recolhemos e porquê</a></li>
           <li><a href="#processing">Como tratamos os dados</a></li>
-          <li><a href="#legal">Fundamentos jurídicos (RGPD)</a></li>
-          <li><a href="#processors">Subcontratantes (terceiros)</a></li>
-          <li><a href="#retention">Conservação de dados</a></li>
+          <li><a href="#legal">Bases legais (RGPD)</a></li>
+          <li><a href="#processors">Subcontratantes / terceiros</a></li>
+          <li><a href="#retention">Conservação dos dados</a></li>
           <li><a href="#transfers">Transferências internacionais</a></li>
           <li><a href="#rights">Os seus direitos</a></li>
           <li><a href="#security">Segurança</a></li>
-          <li><a href="#permissions">Permissões solicitadas</a></li>
-          <li><a href="#analytics">Analítica e relatórios de falhas</a></li>
+          <li><a href="#permissions">Permissões que solicitamos</a></li>
+          <li><a href="#analytics">Analytics & relatórios de falhas</a></li>
           <li><a href="#changes">Alterações a esta política</a></li>
+          <li><a href="#account-deletion">Eliminação de conta</a></li>
           <li><a href="#contact">Contacto</a></li>
         </ol>
       </div>
 
       <h2 id="scope">1) Âmbito</h2>
-      <p>Esta Política de Privacidade explica que dados a Agenzo (“nós”) recolhe, como os usamos e partilhamos, as suas escolhas e os seus direitos ao abrigo da lei aplicável (p.ex., RGPD). Ao utilizar a app, concorda com esta política. Se não concordar, pare de utilizar o serviço e contacte-nos.</p>
+      <p>
+        Esta Política de Privacidade explica que dados a Agenzo (“nós”) recolhe, como os utiliza e partilha, as suas opções
+        e os seus direitos ao abrigo da lei aplicável (por ex., RGPD). Se não concordar, por favor deixe de usar o serviço e contacte-nos.
+      </p>
 
       <h2 id="data">2) Dados que recolhemos e porquê</h2>
+
       <h3>Conta e autenticação</h3>
-      <p><strong>O quê:</strong> Endereço de email e tokens de autenticação quando inicia sessão (Firebase Authentication via email/palavra-passe ou Início de sessão com Google).<br>
-         <strong>Porquê:</strong> Proteger a sua conta, permitir iniciar/terminar sessão e repor palavras-passe, e evitar acessos não autorizados.</p>
+      <p>
+        <strong>O quê:</strong> Endereço de email e tokens de autenticação quando inicia sessão (Firebase Authentication via email/palavra-passe ou Google Sign-In).<br>
+        <strong>Porquê:</strong> Proteger a sua conta, permitir iniciar/terminar sessão e reposições de palavra-passe, e prevenir acesso não autorizado.
+      </p>
 
       <h3>Lembretes e tarefas (guardados na sua conta)</h3>
-      <p><strong>O quê:</strong> Títulos, notas, data/hora, fuso horário, estado de conclusão e IDs locais de notificação.<br>
-         <strong>Porquê:</strong> Mostrar a sua agenda entre dispositivos e programar/cancelar notificações.<br>
-         <em>Nota:</em> As <strong>transcrições de voz</strong> devolvidas pelo nosso servidor são copiadas para as <strong>notas</strong> do lembrete para poder ler/editar mais tarde.</p>
+      <p>
+        <strong>O quê:</strong> Títulos, notas, data/hora, fuso horário, estado de conclusão e identificadores de notificações locais.<br>
+        <strong>Porquê:</strong> Mostrar o seu conteúdo em vários dispositivos e agendar/cancelar notificações locais.<br>
+        <em>Nota:</em> Se usar entrada por voz, o <strong>texto transcrito</strong> reconhecido pode ser guardado nas <strong>notas</strong> do lembrete para poder ver/editar mais tarde.
+      </p>
 
-      <h3>Lembretes por localização (opt-in)</h3>
-      <p><strong>O quê:</strong> Latitude/longitude, raio, modo de disparo (entrar/sair), flags de ativação/desativação, etiqueta e timestamp do último disparo.<br>
-         <strong>Porquê:</strong> Armar geofences localmente e evitar disparos duplicados.</p>
+      <h3>Lembretes por localização (opcional)</h3>
+      <p>
+        <strong>O quê:</strong> Coordenadas do local guardado (latitude/longitude), raio, modo de disparo (entrada/saída), etiquetas, estado ativado/desativado e carimbos de data/hora do último disparo.<br>
+        <strong>Porquê:</strong> Criar e gerir lembretes baseados em localização e evitar disparos duplicados.
+      </p>
+
+      <h3>Pesquisa de locais (Google Places / Maps)</h3>
+      <p>
+        <strong>O quê:</strong> O texto de pesquisa que escreve (por ex., nome de uma loja) e, quando disponível, um <strong>viés de localização</strong> opcional baseado na <strong>área/centro do mapa</strong> ou num <strong>ponto selecionado</strong> na interface.<br>
+        <strong>Porquê:</strong> Fornecer melhores sugestões de autocomplete e resultados de locais relevantes para a área que está a visualizar.<br>
+        <em>Importante:</em> Este viés refere-se à área que está a ver/escolher na app. Não enviamos para a Google um fluxo contínuo de “localização em tempo real”.
+      </p>
+
+      <h3>Entrada por voz (opcional)</h3>
+      <p>
+        <strong>O quê:</strong> Áudio do microfone gravado num ficheiro temporário no seu dispositivo, além do seu contexto de idioma e fuso horário.<br>
+        <strong>Porquê:</strong> Converter fala em lembretes/tarefas (ver <a href="#processors">§5</a>). O ficheiro temporário é apagado do dispositivo após a conclusão do processamento.
+      </p>
 
       <h3>Dados do dispositivo e caches locais (no seu dispositivo)</h3>
-      <p><strong>O quê:</strong> Idioma selecionado, preferências de consentimento/“não perguntar novamente”, estado da permissão de notificações, dados em cache de notificações agendadas, payloads de deep-link e uma <strong>fila de ações pendentes</strong> (ID do lembrete, ação como Concluir/Adiar e timestamp) para uso offline.<br>
-         <strong>Porquê:</strong> Evitar pedir permissões repetidamente, reabrir o conteúdo certo a partir das notificações e reproduzir ações quando voltar a estar online.</p>
-
-      <h3>Entrada de voz (opt-in)</h3>
-      <p><strong>O quê:</strong> Áudio do microfone gravado num ficheiro temporário, o seu ID de utilizador, idioma e fuso horário.<br>
-         <strong>Porquê:</strong> Converter fala em lembretes/tarefas (ver <a href="#processors">§5</a> sobre subcontratantes).</p>
+      <p>
+        <strong>O quê:</strong> Idioma escolhido, flags de consentimento/“não perguntar novamente”, estado de permissões de notificações, dados de notificações agendadas em cache,
+        payloads de deep-links e uma pequena fila de ações pendentes para uso offline (por ex., ID do lembrete + ação + timestamp).<br>
+        <strong>Porquê:</strong> Melhorar a experiência, evitar repetir pedidos de permissões, abrir o ecrã correto a partir das notificações e repetir ações quando voltar a estar online.
+      </p>
 
       <h3>Suporte e feedback</h3>
-      <p><strong>O quê (anexado automaticamente):</strong> O seu <strong>UID</strong> com sessão iniciada, <strong>email da conta</strong>, <strong>idioma</strong>, <strong>fuso horário</strong> (IANA e offset), <strong>plataforma</strong>, <strong>versão do SO</strong>, <strong>hostname</strong> do dispositivo, <strong>versão da app</strong> (se disponível) e <strong>timestamp</strong>, além da mensagem que escrever.<br>
-         <strong>Porquê:</strong> Diagnosticar problemas e responder eficazmente.</p>
+      <p>
+        <strong>O quê:</strong> Se nos contactar por email, recebemos a informação que decidir enviar.<br>
+        <strong>Diagnóstico (opcional):</strong> A app pode <strong>preencher</strong> um rascunho de email com detalhes úteis (como UID, email da conta, idioma, fuso horário, plataforma, versão do SO, modelo do dispositivo, versão da app e timestamp) para acelerar o suporte. Pode editar ou remover este texto antes de enviar.<br>
+        <strong>Porquê:</strong> Diagnosticar problemas e responder de forma eficaz.
+      </p>
 
-      <p><strong>Não recolhemos:</strong> analítica de terceiros, IDs de publicidade ou dados de SDKs de marketing; trilhas contínuas de localização em segundo plano (o geofencing corre no dispositivo).</p>
+      <p>
+        <strong>Não recolhemos intencionalmente:</strong> IDs de publicidade, dados de SDKs de marketing, ou um histórico contínuo de localização em segundo plano (por onde anda).
+      </p>
 
       <h2 id="processing">3) Como tratamos os dados</h2>
       <ul>
-        <li><strong>Armazenamento principal:</strong> Lembretes, tarefas e lembretes por localização são guardados no <strong>Google Cloud Firestore</strong> sob o seu ID de utilizador.</li>
-        <li><strong>Notificações:</strong> Agendamos notificações <strong>locais</strong> (sem pushes de marketing). No Android, podemos pedir alarmes exatos e registar recetores de arranque para que os lembretes persistam após reinícios.</li>
-        <li><strong>Geofencing:</strong> Corre localmente no seu dispositivo; apenas timestamps de disparo são escritos de volta.</li>
-        <li><strong>Pipeline de voz:</strong> O áudio é enviado de forma segura, transcrito, opcionalmente resumido/extraído, e a <strong>transcrição reconhecida</strong> é adicionada às notas do seu lembrete. O ficheiro de áudio temporário no dispositivo é apagado após o processamento.</li>
+        <li><strong>Armazenamento principal:</strong> Lembretes, tarefas e lembretes por localização são armazenados no <strong>Google Cloud Firestore</strong> sob o seu ID de utilizador.</li>
+        <li><strong>Notificações:</strong> Agendamos notificações <strong>locais</strong> (sem notificações push de marketing). No Android, pode ativar opcionalmente lembretes “a horas exatas”; se não ativar, os lembretes de tempo podem ter variação de entrega gerida pelo sistema operativo.</li>
+        <li><strong>Geofencing:</strong> Os lembretes por localização são acionados por geofencing no dispositivo. Guardamos o local definido e podemos atualizar timestamps/estado no seu registo do Firestore (não enviamos amostras contínuas de localização).</li>
+        <li><strong>Fluxo de voz:</strong> O áudio é enviado de forma segura para a nossa Cloud Function para transcrição; depois o texto transcrito pode ser usado para criar um lembrete. O áudio bruto não é guardado pela app no Firestore.</li>
+        <li><strong>Cache offline (persistência do Firestore):</strong> A app pode manter dados do Firestore em cache no seu dispositivo para carregamento mais rápido e uso offline. Ao terminar sessão e ao eliminar a conta, a app limpa a cache local para evitar resíduos entre contas.</li>
       </ul>
 
-      <h2 id="legal">4) Fundamentos jurídicos (RGPD)</h2>
+      <h2 id="legal">4) Bases legais (RGPD)</h2>
       <ul>
-        <li><strong>Execução contratual:</strong> Fornecer lembretes, tarefas, notificações e funcionalidades relacionadas que solicita.</li>
-        <li><strong>Interesses legítimos:</strong> Fiabilidade do serviço, segurança e prevenção de fraude (p.ex., evitar disparos duplicados, garantir a entrega).</li>
-        <li><strong>Consentimento:</strong> Microfone, localização precisa/em segundo plano e notificações são permissões do SO, opcionais e revogáveis a qualquer momento.</li>
+        <li><strong>Necessidade contratual:</strong> Fornecer lembretes, tarefas, notificações e funcionalidades relacionadas que solicitar.</li>
+        <li><strong>Interesses legítimos:</strong> Fiabilidade do serviço, segurança e prevenção de fraude (por ex., evitar disparos duplicados).</li>
+        <li><strong>Consentimento:</strong> Microfone, localização precisa/em segundo plano e notificações são permissões do sistema que pode conceder ou retirar a qualquer momento.</li>
         <li><strong>Obrigação legal:</strong> Podemos tratar dados para cumprir a lei aplicável.</li>
       </ul>
 
-      <h2 id="processors">5) Subcontratantes (quem nos ajuda a operar a app)</h2>
+      <h2 id="processors">5) Subcontratantes / terceiros (quem nos ajuda a operar a app)</h2>
       <ol>
-        <li><strong>Google Firebase (Google LLC)</strong> — Autenticação e <strong>Cloud Firestore</strong> para armazenar os seus lembretes, tarefas e registos de localização.</li>
-        <li><strong>Google Cloud Speech-to-Text</strong> — Processa os <strong>clips de áudio</strong> submetidos via Voz para produzir transcrições.</li>
-        <li><strong>Groq (Llama API)</strong> — Recebe <strong>a transcrição e o contexto do seu fuso horário</strong> (não o áudio bruto) para extrair detalhes de lembretes/tarefas da fala.</li>
-        <li><strong>Google Maps Platform / Places API</strong> — Renderização de mapa, autocomplete e geocodificação para lembretes por localização. As requisições podem incluir o seu texto de pesquisa e coordenadas grosseiras.</li>
-        <li><strong>SendGrid (Twilio SendGrid)</strong> — Transmite emails de suporte/feedback; armazena metadados típicos de email e conteúdo para entrega/diagnóstico.</li>
-        <li><strong>Plugins de plataforma</strong> (Geolocator, frameworks de geofencing/serviço em primeiro plano, notificações locais) — Operam <strong>no dispositivo</strong>; <strong>não</strong> transmitem os seus dados aos seus publishers.</li>
+        <li><strong>Google Firebase (Google LLC)</strong> — Autenticação e armazenamento no <strong>Cloud Firestore</strong> dos seus lembretes, tarefas e registos de lembretes por localização.</li>
+        <li><strong>Google Maps Platform / Places API</strong> — Renderização do mapa e autocomplete/detalhes de locais para lembretes por localização. Os pedidos podem incluir o texto de pesquisa e um viés opcional de área/ponto (centro/seleção no mapa).</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> — Processa <strong>clipes de áudio</strong> que envia via entrada por voz para gerar transcrições.</li>
+        <li><strong>Groq (API de LLM)</strong> — Recebe <strong>texto transcrito</strong> (não áudio bruto) e contexto de fuso horário para extrair a estrutura de lembretes/tarefas a partir da fala.</li>
+        <li><strong>O seu fornecedor de email</strong> (quando contacta o suporte) — O seu serviço de email processa as mensagens que nos envia, sujeito aos termos e práticas de privacidade do seu fornecedor.</li>
       </ol>
-      <p><strong>Não</strong> vendemos nem alugamos os seus dados. Partilhamos apenas com estes subcontratantes ou quando exigido por lei.</p>
+      <p>
+        <strong>Não</strong> vendemos nem alugamos os seus dados. Partilhamos apenas com estes subcontratantes ou quando exigido por lei.
+      </p>
 
-      <h2 id="retention">6) Conservação de dados</h2>
+      <h2 id="retention">6) Conservação dos dados</h2>
       <ul>
-        <li><strong>Lembretes, tarefas, lembretes por localização:</strong> Mantidos até que os apague ou elimine a sua conta.</li>
-        <li><strong>Itens concluídos:</strong> Mantidos para histórico salvo se os apagar.</li>
-        <li><strong>Ficheiros de áudio de voz (no dispositivo):</strong> Apagados imediatamente após a resposta do servidor.</li>
-        <li><strong>Transcrições de voz:</strong> Persistem nas <strong>notas</strong> do lembrete até que as edite ou apague.</li>
-        <li><strong>Caches do dispositivo e fila de ações pendentes:</strong> Apenas no seu dispositivo; removidos ao limpar os dados da app ou desinstalar.</li>
-        <li><strong>Suporte/feedback:</strong> Guardado no Firestore e enviado via SendGrid; conservado para tratar e auditar o seu pedido. <strong>Não é removido automaticamente</strong> quando elimina a conta — envie email para pedir a eliminação dos registos de suporte.</li>
-        <li><strong>Registos operacionais/sistémicos (fornecedores):</strong> Conservados pelos subcontratantes segundo as suas políticas para segurança/diagnóstico.</li>
+        <li><strong>Lembretes, tarefas, lembretes por localização:</strong> Mantidos até os apagar ou eliminar a sua conta.</li>
+        <li><strong>Itens concluídos:</strong> Mantidos como histórico, salvo se os apagar.</li>
+        <li><strong>Ficheiros de áudio (no dispositivo):</strong> Apagados após o processamento terminar.</li>
+        <li><strong>Transcrições de voz:</strong> Podem permanecer nas <strong>notas</strong> do lembrete até as editar ou apagar.</li>
+        <li><strong>Caches locais (persistência do Firestore):</strong> Guardadas no seu dispositivo para acesso offline/rápido; limpas ao terminar sessão e ao eliminar a conta, e também removíveis ao limpar dados da app ou desinstalar.</li>
+        <li><strong>Emails de suporte:</strong> Mantidos na nossa caixa de entrada conforme necessário para tratar do seu pedido. Não conseguimos remover automaticamente cópias da sua caixa de envio/rascunhos; isso é controlado por si no seu fornecedor de email.</li>
+        <li><strong>Logs operacionais (fornecedores):</strong> Mantidos pelos subcontratantes de acordo com as respetivas políticas para segurança/diagnóstico.</li>
       </ul>
 
       <h2 id="transfers">7) Transferências internacionais</h2>
-      <p>Dados tratados pela Google, Groq e SendGrid podem ser processados na UE e/ou noutros países (incluindo os EUA). Estes fornecedores suportam mecanismos reconhecidos de transferência (p.ex., Cláusulas Contratuais-Tipo). Aplicamos as proteções aqui descritas independentemente do local de processamento.</p>
+      <p>
+        Dados tratados pela Google e pela Groq podem ser processados na UE e/ou noutros países (incluindo os EUA).
+        Estes fornecedores suportam mecanismos reconhecidos de transferência (por ex., Cláusulas Contratuais-Tipo).
+        Aplicamos as proteções descritas aqui independentemente do local de tratamento.
+      </p>
 
       <h2 id="rights">8) Os seus direitos</h2>
-      <p>Sujeito à lei, pode <strong>aceder</strong>, <strong>retificar</strong>, <strong>apagar</strong>, <strong>restringir</strong>, <strong>opor-se</strong> ou <strong>portar</strong> os seus dados.</p>
+      <p>Nos termos da lei, pode <strong>aceder</strong>, <strong>retificar</strong>, <strong>apagar</strong>, <strong>limitar</strong>, <strong>opor-se</strong> ou <strong>portar</strong> os seus dados.</p>
       <ul>
-        <li><strong>Eliminação na app:</strong> Ao eliminar a sua <strong>conta</strong>, os seus <strong>lembretes, tarefas e lembretes por localização</strong> são removidos do Firestore <strong>imediatamente</strong>.
-          <br><em>Não é eliminado automaticamente:</em> submissões de suporte/feedback e cópias de email (SendGrid/outbox), e logs de fornecedores. Contacte-nos para pedir a sua eliminação; cumpriremos salvo necessidade de retenção (p.ex., resolver litígios ou cumprir obrigações legais).</li>
-        <li><strong>Permissões:</strong> Revogue localização/microfone/notificações nas definições do sistema a qualquer momento (as funcionalidades podem deixar de funcionar).</li>
-        <li><strong>Outros pedidos (acesso/exportação, etc.):</strong> Envie email para <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Podemos necessitar de verificar a sua identidade.</li>
+        <li><strong>Eliminação na app:</strong> Eliminar a sua <strong>conta</strong> remove os seus lembretes, tarefas e lembretes por localização do Firestore.</li>
+        <li><strong>Pedido de eliminação via web:</strong> Se não conseguir aceder à app, pode solicitar a eliminação da conta aqui:
+          <a href="https://sharpcreations4.github.io/agenzo-privacy/account-deletion/pt/" target="_blank" rel="noopener">Página de eliminação de conta</a>.
+          Podemos exigir verificação (por exemplo, confirmação de controlo do email da conta) antes de processar.</li>
+        <li><strong>Permissões:</strong> Pode retirar permissões de localização/microfone/notificações nas definições do sistema a qualquer momento (algumas funcionalidades podem deixar de funcionar).</li>
+        <li><strong>Outros pedidos:</strong> Envie email para <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Poderemos ter de verificar a sua identidade.</li>
       </ul>
 
       <h2 id="security">9) Segurança</h2>
       <ul>
-        <li>Segurança de conta via Firebase Authentication; controlo de acesso por utilizador via regras de segurança do Firestore.</li>
-        <li>Todas as comunicações app-servidor usam HTTPS/TLS.</li>
-        <li>Dados no dispositivo vivem na sandbox da plataforma; ficheiros temporários de voz são mantidos apenas em diretórios protegidos da app.</li>
-        <li>O acesso a dados de produção é limitado a operações essenciais. Mantenha o SO atualizado e proteja o seu dispositivo.</li>
+        <li>Segurança da conta através do Firebase Authentication; controlo de acesso por utilizador via regras de segurança do Firestore.</li>
+        <li>Comunicações app-servidor usam HTTPS/TLS.</li>
+        <li>Os dados no dispositivo ficam na sandbox da plataforma; os ficheiros temporários de voz ficam apenas em diretórios protegidos da app.</li>
+        <li>Mantenha o seu SO atualizado e proteja o dispositivo (bloqueio de ecrã, etc.).</li>
       </ul>
 
-      <h2 id="permissions">10) Permissões solicitadas (Android/iOS)</h2>
+      <h2 id="permissions">10) Permissões que solicitamos (Android)</h2>
       <ul>
-        <li><strong>Localização</strong> (aproximada/precisa; pode ser solicitado “Permitir sempre”)</li>
-        <li><strong>Reconhecimento de atividade</strong> (Android)</li>
-        <li><strong>Microfone</strong></li>
-        <li><strong>Notificações / Alarmes exatos</strong> (Android)</li>
-        <li><strong>Serviço em primeiro plano</strong> (Android)</li>
+        <li><strong>Notificações</strong> (Android 13+ permissão em runtime) — para mostrar alertas de lembretes.</li>
+        <li><strong>Alarmes e lembretes (Alarmes exatos)</strong> (Android, opcional) — apenas se ativar o modo “hora exata” para lembretes de tempo mais precisos.</li>
+        <li><strong>Localização</strong> (aproximada/precisa; “Permitir sempre” pode ser solicitado) — para lembretes por localização (geofences) quando a app está fechada.</li>
+        <li><strong>Microfone</strong> (opcional) — apenas se usar entrada por voz.</li>
+        <li><strong>Serviço em primeiro plano</strong> (Android) — declarado por compatibilidade com operação em segundo plano em alguns dispositivos/versões do SO.</li>
       </ul>
-      <p>Pode conceder ou revogar estas permissões nas definições do sistema.</p>
+      <p>Pode conceder ou revogar estas permissões nas definições do sistema. Se as negar, as funcionalidades relacionadas podem não funcionar.</p>
 
-      <h2 id="analytics">11) Analítica e relatórios de falhas</h2>
-      <p><strong>Não</strong> incorporamos analítica de terceiros nem Crashlytics. Se distribuída via lojas de apps, podemos receber métricas <strong>agregadas</strong> de estabilidade (p.ex., contagem de crashes/ANR) das consolas das lojas. Se um dia adicionarmos analítica/relatórios de falhas opcionais, atualizaremos esta política e <strong>pediremos consentimento primeiro</strong>.</p>
+      <h2 id="analytics">11) Analytics e relatórios de falhas</h2>
+      <p>
+        <strong>Não</strong> incluímos SDKs de analytics de terceiros nem Crashlytics na app.
+        Se a app for distribuída via lojas, podemos receber métricas <strong>agregadas</strong> de estabilidade (por ex., contagens de crash/ANR) através das consolas das lojas.
+        Se no futuro adicionarmos analytics/relatórios de falhas opcionais, atualizaremos esta política.
+      </p>
 
       <h2 id="changes">12) Alterações a esta política</h2>
-      <p>Podemos atualizar esta política para refletir alterações de produto ou legais. Atualizaremos a <strong>Data de entrada em vigor</strong> acima e, para alterações materiais, notificaremos na app ou por email. O uso continuado após uma atualização significa que aceita a versão revista.</p>
+      <p>
+        Podemos atualizar esta política para refletir alterações do produto ou legais. Atualizaremos a <strong>data de entrada em vigor</strong> acima e, para alterações materiais, notificaremos na app ou por email.
+        A continuação do uso após uma atualização significa que aceita a política revista.
+      </p>
 
-      <h2 id="contact">13) Contacto</h2>
-      <p><strong>Responsável:</strong> Cosmin Oprea (pessoa singular)<br>
-         <strong>Email:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a><br>
-         Se precisar de um contacto postal para correspondência RGPD, envie-nos email e forneceremos uma morada.</p>
+      <h2 id="account-deletion">13) Eliminação de conta</h2>
+      <p>
+        Pode eliminar a sua conta dentro da app (Definições → Conta → Apagar conta).
+        Se não conseguir aceder à app, pode solicitar a eliminação usando a nossa página web:
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/account-deletion/pt/" target="_blank" rel="noopener">https://sharpcreations4.github.io/agenzo-privacy/account-deletion/pt/</a>.
+      </p>
+      <p class="meta">
+        Para evitar abusos, podemos pedir-lhe que confirme o pedido usando o endereço de email associado à sua conta.
+      </p>
+
+      <h2 id="contact">14) Contacto</h2>
+      <p><strong>Responsável pelo tratamento:</strong> Cosmin Oprea (pessoa singular)<br>
+         <strong>Email:</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
       <p style="margin-top:24px"><a href="#top">↑ Voltar ao topo</a></p>
     </article>
 
