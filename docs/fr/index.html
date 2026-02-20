@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agenzo – Smart Reminders · Politique de Confidentialité (FR)</title>
-  <meta name="description" content="Politique de confidentialité pour Agenzo – Smart Reminders (FR)">
+  <title>Agenzo - Smart Reminders · Politique de confidentialite (FR)</title>
+  <meta name="description" content="Politique de confidentialite pour Agenzo - Smart Reminders (FR)">
   <style>
     :root{
       --bg:#0b0d10;--card:#12161b;--muted:#8ea0b3;--text:#e9eef4;--accent:#3fa7ff;--border:#1f2730
@@ -14,11 +14,81 @@
     a:hover{text-decoration:underline}
     .wrap{max-width:1000px;margin:0 auto;padding:24px}
     header{position:sticky;top:0;background:rgba(11,13,16,.85);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid var(--border);z-index:2}
-    .bar{display:flex;align-items:center;gap:16px;justify-content:space-between;padding:12px 24px}
-    .brand{font-weight:700;letter-spacing:.2px}
-    nav a{margin-right:12px;color:var(--muted)}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text);cursor:pointer}
+
+    /* UPDATED HEADER LAYOUT (3 zones) */
+    .bar{
+      display:grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items:center;
+      gap:16px;
+      padding:12px 24px
+    }
+    .brand{
+      font-weight:700;
+      letter-spacing:.2px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      max-width:320px
+    }
+    nav.lang{
+      justify-self:center;
+      display:flex;
+      gap:10px;
+      align-items:center
+    }
+    nav.lang a{
+      margin:0;
+      color:var(--muted);
+      font-weight:600;
+      font-size:.92rem;
+      padding:6px 8px;
+      border-radius:8px
+    }
+    nav.lang a[aria-current="page"]{
+      color:var(--text);
+      background:rgba(63,167,255,.10);
+      border:1px solid rgba(63,167,255,.20)
+    }
+    .actions{
+      justify-self:end;
+      display:flex;
+      gap:10px;
+      align-items:center
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border:1px solid var(--border);
+      border-radius:8px;
+      background:var(--card);
+      color:var(--text);
+      cursor:pointer;
+      white-space:nowrap
+    }
     .btn:hover{border-color:#2b3542}
+    .btn.danger{
+      border-color:rgba(255,90,90,.35);
+      background:rgba(255,90,90,.08)
+    }
+    .btn.danger:hover{
+      border-color:rgba(255,90,90,.55)
+    }
+
+    /* Mobile: stack without making header feel huge */
+    @media (max-width: 720px){
+      .bar{
+        grid-template-columns: 1fr;
+        justify-items:center;
+        gap:10px
+      }
+      .brand{max-width:100%}
+      .actions{justify-self:center}
+    }
+
     .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-top:24px}
     h1{font-size:1.8rem;margin:0 0 8px}
     h2{margin-top:28px;font-size:1.15rem}
@@ -38,8 +108,9 @@
 <body>
   <header>
     <div class="bar">
-      <div class="brand">Agenzo – Smart Reminders</div>
-      <nav aria-label="Sélecteur de langue">
+      <div class="brand">Agenzo - Smart Reminders</div>
+
+      <nav class="lang" aria-label="Selecteur de langue">
         <a href="https://sharpcreations4.github.io/agenzo-privacy/en/">EN</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/pt/">PT</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/es/">ES</a>
@@ -47,190 +118,208 @@
         <a href="https://sharpcreations4.github.io/agenzo-privacy/fr/" aria-current="page">FR</a>
         <a href="https://sharpcreations4.github.io/agenzo-privacy/de/">DE</a>
       </nav>
-      <button class="btn print" onclick="window.print()" title="Imprimer / Enregistrer en PDF">🖨️ Imprimer / PDF</button>
+
+      <div class="actions">
+        <a class="btn danger" href="https://sharpcreations4.github.io/agenzo-privacy/account-deletion/fr/" title="Supprimer votre compte">
+          ðŸ—‘ï¸ Supprimer le compte
+        </a>
+        <button class="btn print" onclick="window.print()" title="Imprimer / Enregistrer en PDF">ðŸ–¨ï¸ Imprimer / PDF</button>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
     <article class="card">
-      <h1 id="top">Politique de confidentialité (FR)</h1>
-      <p class="meta"><strong>Date d’entrée en vigueur :</strong> 19 février 2026 • <strong>Version :</strong> 1.2</p>
-      <p class="meta"><strong>Responsable du traitement :</strong> Cosmin Oprea (personne physique) • <strong>Contact :</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
-      <p class="meta"><em>Applicable à : Agenzo – Smart Reminders (Android) et aux canaux d’assistance associés.</em></p>
+      <h1 id="top">Politique de confidentialite (FR)</h1>
+      <p class="meta"><strong>Date d'entree en vigueur :</strong> 19 fevrier 2026 â€¢ <strong>Version :</strong> 1.2</p>
+      <p class="meta"><strong>Responsable du traitement :</strong> Cosmin Oprea (particulier) â€¢ <strong>Contact :</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
+      <p class="meta"><em>S'applique a : Agenzo - Smart Reminders (Android) et aux canaux d'assistance associes.</em></p>
 
       <div class="toc">
-        <strong>Sommaire</strong>
+        <strong>Table des matieres</strong>
         <ol>
-          <li><a href="#scope">Champ d’application</a></li>
-          <li><a href="#data">Données que nous collectons et pourquoi</a></li>
-          <li><a href="#processing">Comment nous traitons les données</a></li>
-          <li><a href="#legal">Bases légales (RGPD)</a></li>
+          <li><a href="#scope">Portee</a></li>
+          <li><a href="#data">Donnees que nous collectons et pourquoi</a></li>
+          <li><a href="#processing">Comment nous traitons les donnees</a></li>
+          <li><a href="#legal">Bases juridiques (RGPD)</a></li>
           <li><a href="#processors">Sous-traitants tiers</a></li>
-          <li><a href="#retention">Conservation des données</a></li>
+          <li><a href="#retention">Conservation des donnees</a></li>
           <li><a href="#transfers">Transferts internationaux</a></li>
           <li><a href="#rights">Vos droits</a></li>
-          <li><a href="#security">Sécurité</a></li>
-          <li><a href="#permissions">Autorisations demandées</a></li>
-          <li><a href="#analytics">Analytique & rapports de crash</a></li>
+          <li><a href="#security">Securite</a></li>
+          <li><a href="#permissions">Autorisations demandees</a></li>
+          <li><a href="#analytics">Analyses et rapports de plantage</a></li>
           <li><a href="#changes">Modifications de cette politique</a></li>
+          <li><a href="#account-deletion">Suppression du compte</a></li>
           <li><a href="#contact">Contact</a></li>
         </ol>
       </div>
 
-      <h2 id="scope">1) Champ d’application</h2>
+      <h2 id="scope">1) Portee</h2>
       <p>
-        La présente politique de confidentialité explique quelles données Agenzo (« nous », « notre ») collecte,
-        comment nous les utilisons et les partageons, vos choix, ainsi que vos droits au regard de la législation applicable (p. ex. RGPD).
-        Si vous n’êtes pas d’accord, veuillez cesser d’utiliser le service et nous contacter.
+        Cette Politique de confidentialite explique quelles donnees Agenzo ("nous") collecte, comment nous les utilisons et les partageons, vos choix,
+        et vos droits en vertu de la loi applicable (par ex., RGPD). Si vous n'etes pas d'accord, veuillez cesser d'utiliser le service et nous contacter.
       </p>
 
-      <h2 id="data">2) Données que nous collectons et pourquoi</h2>
+      <h2 id="data">2) Donnees que nous collectons et pourquoi</h2>
 
-      <h3>Compte & authentification</h3>
+      <h3>Compte et authentification</h3>
       <p>
-        <strong>Quoi :</strong> Adresse e-mail et jetons d’authentification lorsque vous vous connectez (Firebase Authentication via e-mail/mot de passe ou Google Sign-In).<br>
-        <strong>Pourquoi :</strong> Sécuriser votre compte, permettre la connexion/déconnexion et la réinitialisation du mot de passe, et empêcher les accès non autorisés.
+        <strong>Quoi :</strong> Adresse e-mail et jetons d'authentification lorsque vous vous connectez (Firebase Authentication via e-mail/mot de passe ou Google Sign-In).<br>
+        <strong>Pourquoi :</strong> Securiser votre compte, permettre la connexion/deconnexion et la reinitialisation du mot de passe, et prevenir les acces non autorises.
       </p>
 
-      <h3>Rappels & tâches (enregistrés sur votre compte)</h3>
+      <h3>Rappels et taches (enregistres sur votre compte)</h3>
       <p>
-        <strong>Quoi :</strong> Titres, notes, date/heure d’échéance, fuseau horaire, état d’achèvement, et identifiants de notifications locales.<br>
-        <strong>Pourquoi :</strong> Afficher votre contenu sur plusieurs appareils et programmer/annuler des notifications locales.<br>
-        <em>Remarque :</em> Si vous utilisez la saisie vocale, le <strong>texte transcrit</strong> peut être enregistré dans les <strong>notes</strong> du rappel afin que vous puissiez le consulter/modifier plus tard.
+        <strong>Quoi :</strong> Titres, notes, date/heure d'echeance, fuseau horaire, statut d'achevement et identifiants de notifications locales.<br>
+        <strong>Pourquoi :</strong> Afficher votre contenu sur tous vos appareils et planifier/annuler des notifications locales.<br>
+        <em>Remarque :</em> Si vous utilisez la saisie vocale, le <strong>texte transcrit</strong> reconnu peut etre stocke dans les <strong>notes</strong> de votre rappel afin que vous puissiez le consulter/le modifier plus tard.
       </p>
 
-      <h3>Rappels basés sur la localisation (optionnel)</h3>
+      <h3>Rappels de lieu (optionnels)</h3>
       <p>
-        <strong>Quoi :</strong> Coordonnées du lieu enregistré (latitude/longitude), rayon, mode de déclenchement (entrée/sortie), libellés, état activé/désactivé, et horodatages du dernier déclenchement.<br>
-        <strong>Pourquoi :</strong> Créer et gérer des rappels basés sur la localisation et éviter les déclenchements en double.
+        <strong>Quoi :</strong> Coordonnees du lieu enregistre (latitude/longitude), rayon, mode de declenchement (entree/sortie), libelles, etat active/desactive et horodatages du dernier declenchement.<br>
+        <strong>Pourquoi :</strong> Creer et gerer des rappels bases sur la localisation et eviter les declenchements en double.
       </p>
 
       <h3>Recherche de lieux (Google Places / Maps)</h3>
       <p>
-        <strong>Quoi :</strong> Le texte de recherche que vous saisissez (p. ex. le nom d’un magasin) et, lorsque disponible, un <strong>biais de localisation</strong> basé sur la <strong>zone/le centre de la carte</strong> ou un <strong>point sélectionné</strong> dans l’interface.<br>
-        <strong>Pourquoi :</strong> Fournir de meilleures suggestions d’autocomplétion et des résultats pertinents pour la zone que vous consultez.<br>
-        <em>Important :</em> Ce biais concerne la zone que vous visualisez/choisissez dans l’application. Nous n’envoyons pas de « flux de localisation en direct » continu à Google.
+        <strong>Quoi :</strong> Le texte de recherche que vous saisissez (par ex., nom d'un magasin) et, lorsqu'il est disponible, un <strong>biais de localisation</strong> facultatif base sur la <strong>zone/centre de la carte</strong> ou un <strong>point selectionne</strong> dans l'interface.<br>
+        <strong>Pourquoi :</strong> Fournir de meilleures suggestions d'autocompletion et des resultats de lieux pertinents pour la zone que vous parcourez.<br>
+        <em>Important :</em> Ce biais concerne la zone que vous consultez/choisissez dans l'application. Nous n'envoyons pas de "flux de localisation en direct" continu a Google.
       </p>
 
-      <h3>Saisie vocale (optionnel)</h3>
+      <h3>Saisie vocale (optionnelle)</h3>
       <p>
-        <strong>Quoi :</strong> Audio du microphone enregistré dans un fichier temporaire sur votre appareil, ainsi que votre langue et le contexte de fuseau horaire.<br>
-        <strong>Pourquoi :</strong> Convertir la parole en rappels/tâches (voir <a href="#processors">§5</a>). Le fichier audio temporaire est supprimé de l’appareil une fois le traitement terminé.
+        <strong>Quoi :</strong> Audio du microphone enregistre dans un fichier temporaire sur votre appareil, ainsi que le contexte de langue et de fuseau horaire.<br>
+        <strong>Pourquoi :</strong> Convertir la parole en rappels/taches (voir <a href="#processors">§5</a>). Le fichier audio temporaire est supprime de l'appareil une fois le traitement termine.
       </p>
 
-      <h3>Données de l’appareil & caches locaux (sur votre appareil)</h3>
+      <h3>Donnees de l'appareil et caches locaux (sur votre appareil)</h3>
       <p>
-        <strong>Quoi :</strong> Langue sélectionnée, indicateurs de consentement/« ne plus demander », état de permission de notifications,
-        données mises en cache pour les notifications programmées, charges utiles de deep-link, et une petite file d’actions en attente pour l’utilisation hors ligne (p. ex. ID du rappel + action + horodatage).<br>
-        <strong>Pourquoi :</strong> Améliorer l’expérience, éviter de redemander des permissions, ouvrir le bon écran depuis une notification et rejouer les actions lorsque vous revenez en ligne.
+        <strong>Quoi :</strong> Langue selectionnee, indicateurs de consentement/"ne plus demander", etat des autorisations de notification, donnees de notifications planifiees en cache,
+        charges utiles de liens profonds et une petite file d'actions en attente pour l'utilisation hors ligne (par ex., ID de rappel + action + horodatage).<br>
+        <strong>Pourquoi :</strong> Ameliorer l'experience utilisateur, eviter de redemander les autorisations, rouvrir le bon ecran depuis les notifications et rejouer les actions au retour en ligne.
       </p>
 
-      <h3>Assistance & retours</h3>
+      <h3>Assistance et retours</h3>
       <p>
-        <strong>Quoi :</strong> Si vous nous contactez par e-mail, nous recevons les informations que vous choisissez d’envoyer.<br>
-        <strong>Diagnostics (optionnels) :</strong> L’application peut <strong>préremplir</strong> un brouillon d’e-mail avec des détails utiles (tels que UID, e-mail du compte, langue, fuseau horaire, plateforme, version d’OS, modèle d’appareil, version de l’app, et horodatage) afin d’accélérer l’assistance. Vous pouvez modifier ou supprimer ce texte avant l’envoi.<br>
-        <strong>Pourquoi :</strong> Diagnostiquer les problèmes et répondre efficacement.
+        <strong>Quoi :</strong> Si vous nous contactez par e-mail, nous recevons les informations que vous choisissez d'envoyer.<br>
+        <strong>Diagnostics (facultatif) :</strong> L'application peut <strong>pre-remplir</strong> un brouillon d'e-mail avec des details utiles (tels que UID, e-mail du compte, langue, fuseau horaire, plateforme, version OS, modele d'appareil, version de l'application et horodatage) pour accelerer l'assistance. Vous pouvez modifier ou supprimer ce texte avant l'envoi.<br>
+        <strong>Pourquoi :</strong> Diagnostiquer les problemes et repondre efficacement.
       </p>
 
       <p>
-        <strong>Nous ne collectons pas intentionnellement :</strong> identifiants publicitaires, données de SDK marketing, ni un historique continu de localisation en arrière-plan de vos déplacements.
+        <strong>Nous ne collectons pas intentionnellement :</strong> identifiants publicitaires, donnees SDK marketing ou historique continu de localisation en arriere-plan de vos deplacements.
       </p>
 
-      <h2 id="processing">3) Comment nous traitons les données</h2>
+      <h2 id="processing">3) Comment nous traitons les donnees</h2>
       <ul>
-        <li><strong>Stockage principal :</strong> Les rappels, tâches et rappels de localisation sont stockés dans <strong>Google Cloud Firestore</strong> sous votre identifiant utilisateur.</li>
-        <li><strong>Notifications :</strong> Nous programmons des notifications <strong>locales</strong> (pas de notifications push marketing). Sur Android, vous pouvez activer en option un mode « heure exacte » ; sinon, les rappels horaires peuvent être délivrés avec une variation gérée par le système.</li>
-        <li><strong>Géorepérage (geofencing) :</strong> Les rappels de localisation sont déclenchés par un géorepérage sur l’appareil. Nous stockons le lieu enregistré et pouvons mettre à jour l’état/les horodatages de déclenchement dans Firestore (nous ne téléversons pas d’échantillons continus de localisation).</li>
-        <li><strong>Chaîne vocale :</strong> L’audio est téléversé de manière sécurisée vers notre Cloud Function pour transcription, puis le texte transcrit peut être utilisé pour créer un rappel. L’audio brut n’est pas stocké par l’application dans Firestore.</li>
-        <li><strong>Cache hors ligne (persistence Firestore) :</strong> L’application peut mettre en cache localement des données Firestore pour accélérer l’affichage et permettre l’usage hors ligne. Lors de la déconnexion et de la suppression de compte, l’application efface le cache local pour éviter toute trace entre comptes.</li>
+        <li><strong>Stockage principal :</strong> Les rappels, taches et rappels de lieu sont stockes dans <strong>Google Cloud Firestore</strong> sous votre identifiant utilisateur.</li>
+        <li><strong>Notifications :</strong> Nous planifions des notifications <strong>locales</strong> (pas de notifications push marketing). Sur Android, vous pouvez activer en option les rappels a "heure exacte" ; sinon, les rappels horaires peuvent etre livres avec une variation de delai geree par l'OS.</li>
+        <li><strong>Georeperage :</strong> Les rappels de lieu sont declenches par georeperage sur l'appareil. Nous stockons le lieu enregistre, et nous pouvons mettre a jour les horodatages/l'etat de declenchement dans votre enregistrement Firestore (nous ne telechargeons pas d'echantillons de localisation continus).</li>
+        <li><strong>Pipeline vocal :</strong> L'audio est televerse de maniere securisee vers notre Cloud Function pour transcription, puis le texte transcrit peut etre utilise pour creer un rappel. L'audio brut n'est pas stocke par l'application dans Firestore.</li>
+        <li><strong>Cache hors ligne (persistance Firestore) :</strong> L'application peut mettre en cache les donnees Firestore sur votre appareil pour un chargement plus rapide et un usage hors ligne. Lors de la deconnexion et de la suppression de compte, l'application efface le cache local pour eviter les residus inter-comptes.</li>
       </ul>
 
-      <h2 id="legal">4) Bases légales (RGPD)</h2>
+      <h2 id="legal">4) Bases juridiques (RGPD)</h2>
       <ul>
-        <li><strong>Nécessité contractuelle :</strong> Fournir les rappels, tâches, notifications et fonctionnalités associées que vous demandez.</li>
-        <li><strong>Intérêts légitimes :</strong> Fiabilité du service, sécurité et prévention de la fraude (p. ex. éviter les déclenchements en double).</li>
-        <li><strong>Consentement :</strong> Microphone, localisation précise/en arrière-plan et notifications sont des permissions au niveau du système que vous pouvez accorder ou retirer à tout moment.</li>
-        <li><strong>Obligation légale :</strong> Nous pouvons traiter des données pour respecter la législation applicable.</li>
+        <li><strong>Necessite contractuelle :</strong> Fournir les rappels, taches, notifications et fonctionnalites associees que vous demandez.</li>
+        <li><strong>Interets legitimes :</strong> Fiabilite du service, securite et prevention de la fraude (par ex., eviter les declenchements en double).</li>
+        <li><strong>Consentement :</strong> Microphone, localisation precise/en arriere-plan et notifications sont des autorisations OS que vous pouvez accorder ou retirer a tout moment.</li>
+        <li><strong>Obligation legale :</strong> Nous pouvons traiter des donnees pour respecter la loi applicable.</li>
       </ul>
 
-      <h2 id="processors">5) Sous-traitants tiers (qui nous aident à faire fonctionner l’app)</h2>
+      <h2 id="processors">5) Sous-traitants tiers (qui nous aident a exploiter l'application)</h2>
       <ol>
-        <li><strong>Google Firebase (Google LLC)</strong> — Authentification et stockage <strong>Cloud Firestore</strong> pour vos rappels, tâches et enregistrements de rappels de localisation.</li>
-        <li><strong>Google Maps Platform / Places API</strong> — Affichage de la carte et autocomplétion/détails des lieux pour les rappels de localisation. Les requêtes peuvent inclure votre texte de recherche et un biais de zone/point (centre/sélection de la carte).</li>
-        <li><strong>Google Cloud Speech-to-Text</strong> — Traite les <strong>clips audio</strong> que vous soumettez via la saisie vocale pour produire une transcription.</li>
-        <li><strong>Groq (API LLM)</strong> — Reçoit le <strong>texte transcrit</strong> (pas l’audio brut) ainsi que le contexte de fuseau horaire pour extraire une structure de rappel/tâche à partir de la parole.</li>
-        <li><strong>Votre fournisseur d’e-mail</strong> (lorsque vous contactez l’assistance) — Votre service de messagerie traite les messages que vous nous envoyez, conformément à ses conditions et pratiques de confidentialité.</li>
+        <li><strong>Google Firebase (Google LLC)</strong> - Authentification et stockage <strong>Cloud Firestore</strong> de vos rappels, taches et enregistrements de rappels de lieu.</li>
+        <li><strong>Google Maps Platform / Places API</strong> - Rendu de carte et autocompletion/details de lieux pour les rappels de lieu. Les requetes peuvent inclure votre texte de recherche et un biais de zone/point facultatif (centre/selection de carte).</li>
+        <li><strong>Google Cloud Speech-to-Text</strong> - Traite les <strong>extraits audio</strong> que vous soumettez via la saisie vocale pour produire des transcriptions.</li>
+        <li><strong>Groq (API LLM)</strong> - Recoit le <strong>texte transcrit</strong> (pas l'audio brut) plus le contexte de fuseau horaire pour extraire la structure rappel/tache a partir de la parole.</li>
+        <li><strong>Votre fournisseur de messagerie</strong> (lorsque vous contactez l'assistance) - Votre service de messagerie traite les messages que vous nous envoyez, selon les conditions et pratiques de confidentialite de votre fournisseur.</li>
       </ol>
       <p>
-        Nous ne <strong>vendons</strong> ni ne <strong>louons</strong> vos données. Nous les partageons uniquement avec ces sous-traitants ou lorsque la loi l’exige.
+        Nous ne <strong>vendons</strong> ni ne louons vos donnees. Nous les partageons uniquement avec ces sous-traitants ou lorsque la loi l'exige.
       </p>
 
-      <h2 id="retention">6) Conservation des données</h2>
+      <h2 id="retention">6) Conservation des donnees</h2>
       <ul>
-        <li><strong>Rappels, tâches, rappels de localisation :</strong> Conservés jusqu’à ce que vous les supprimiez ou supprimiez votre compte.</li>
-        <li><strong>Éléments terminés :</strong> Conservés comme historique sauf suppression par vos soins.</li>
-        <li><strong>Fichiers audio vocaux (sur l’appareil) :</strong> Supprimés une fois le traitement terminé.</li>
-        <li><strong>Transcriptions vocales :</strong> Peuvent rester dans les <strong>notes</strong> du rappel jusqu’à ce que vous les modifiiez ou les supprimiez.</li>
-        <li><strong>Caches locaux (persistence Firestore) :</strong> Stockés sur votre appareil pour l’accès hors ligne/rapide ; supprimés lors de la déconnexion et de la suppression de compte, et également supprimables en effaçant les données de l’app ou en désinstallant.</li>
-        <li><strong>E-mails d’assistance :</strong> Conservés dans notre boîte de réception autant que nécessaire pour traiter votre demande. Nous ne pouvons pas supprimer automatiquement les copies dans votre boîte d’envoi ; cela dépend de votre fournisseur d’e-mail.</li>
-        <li><strong>Journaux système/opérationnels (fournisseurs) :</strong> Conservés par les sous-traitants selon leurs politiques pour la sécurité/le diagnostic.</li>
+        <li><strong>Rappels, taches, rappels de lieu :</strong> Conserves jusqu'a ce que vous les supprimiez ou supprimiez votre compte.</li>
+        <li><strong>Elements termines :</strong> Conserves a des fins d'historique sauf si vous les supprimez.</li>
+        <li><strong>Fichiers audio vocaux (sur l'appareil) :</strong> Supprimes une fois le traitement termine.</li>
+        <li><strong>Transcriptions vocales :</strong> Peuvent rester dans les <strong>notes</strong> de rappel jusqu'a ce que vous les modifiiez ou supprimiez.</li>
+        <li><strong>Caches locaux (persistance Firestore) :</strong> Stockes sur votre appareil pour un acces hors ligne/rapide ; effaces a la deconnexion et a la suppression de compte, et egalement supprimables en effacant les donnees de l'application ou en desinstallant.</li>
+        <li><strong>E-mails d'assistance :</strong> Conserves dans notre boite de reception selon les besoins pour traiter votre demande. Nous ne pouvons pas supprimer automatiquement les copies de votre boite d'envoi ; vous les gerez via votre fournisseur de messagerie.</li>
+        <li><strong>Journaux systeme/operationnels (fournisseurs) :</strong> Conserves par les sous-traitants selon leurs politiques de securite/diagnostic.</li>
       </ul>
 
       <h2 id="transfers">7) Transferts internationaux</h2>
       <p>
-        Les données traitées par Google et Groq peuvent être traitées dans l’UE et/ou dans d’autres pays (y compris les États-Unis).
-        Ces fournisseurs prennent en charge des mécanismes de transfert reconnus (p. ex. clauses contractuelles types).
-        Nous appliquons les protections décrites ici quel que soit le lieu de traitement.
+        Les donnees traitees par Google et Groq peuvent etre traitees dans l'UE et/ou dans d'autres pays (y compris les Etats-Unis).
+        Ces fournisseurs prennent en charge des mecanismes de transfert reconnus (par ex., Clauses Contractuelles Types).
+        Nous appliquons les protections decrites ici quel que soit le lieu de traitement.
       </p>
 
       <h2 id="rights">8) Vos droits</h2>
-      <p>Selon la loi applicable, vous pouvez <strong>accéder</strong>, <strong>rectifier</strong>, <strong>supprimer</strong>, <strong>limiter</strong>, <strong>vous opposer</strong> ou <strong>porter</strong> vos données.</p>
+      <p>Sous reserve de la loi, vous pouvez <strong>acceder</strong>, <strong>rectifier</strong>, <strong>supprimer</strong>, <strong>limiter</strong>, <strong>vous opposer</strong> ou <strong>porter</strong> vos donnees.</p>
       <ul>
-        <li><strong>Suppression dans l’app :</strong> La suppression de votre <strong>compte</strong> supprime vos rappels, tâches et rappels de localisation de Firestore.</li>
-        <li><strong>Permissions :</strong> Vous pouvez révoquer à tout moment les permissions de localisation/microphone/notifications dans les réglages système (certaines fonctionnalités peuvent cesser de fonctionner).</li>
-        <li><strong>Autres demandes :</strong> Envoyez un e-mail à <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Nous pouvons devoir vérifier votre identité.</li>
+        <li><strong>Suppression dans l'application :</strong> La suppression de votre <strong>compte</strong> retire vos rappels, taches et rappels de lieu de Firestore.</li>
+        <li><strong>Demande de suppression via le web :</strong> Si vous ne pouvez pas acceder a l'application, vous pouvez demander la suppression du compte ici :
+          <a href="https://sharpcreations4.github.io/agenzo-privacy/account-deletion/fr/" target="_blank" rel="noopener">Page de suppression du compte</a>.
+          Nous pouvons exiger une verification (par exemple, confirmer le controle de l'e-mail du compte) avant traitement.</li>
+        <li><strong>Autorisations :</strong> Revoquez la localisation/le microphone/les notifications dans les parametres systeme a tout moment (certaines fonctionnalites peuvent cesser de fonctionner).</li>
+        <li><strong>Autres demandes :</strong> Ecrivez a <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a>. Nous pouvons devoir verifier votre identite.</li>
       </ul>
 
-      <h2 id="security">9) Sécurité</h2>
+      <h2 id="security">9) Securite</h2>
       <ul>
-        <li>Sécurité du compte via Firebase Authentication ; contrôle d’accès par utilisateur via les règles de sécurité Firestore.</li>
-        <li>Les communications app-serveur utilisent HTTPS/TLS.</li>
-        <li>Les données sur l’appareil restent dans l’espace applicatif ; les fichiers vocaux temporaires sont conservés uniquement dans des répertoires protégés de l’app.</li>
-        <li>Gardez votre OS à jour et protégez votre appareil (verrouillage d’écran, etc.).</li>
+        <li>Securite du compte via Firebase Authentication ; controle d'acces par utilisateur via les regles de securite Firestore.</li>
+        <li>Les communications application-serveur utilisent HTTPS/TLS.</li>
+        <li>Les donnees sur l'appareil restent dans le bac a sable de la plateforme ; les fichiers vocaux temporaires sont conserves uniquement dans des repertoires proteges de l'application.</li>
+        <li>Maintenez votre OS a jour et protegez votre appareil (verrouillage d'ecran, etc.).</li>
       </ul>
 
-      <h2 id="permissions">10) Autorisations demandées (Android)</h2>
+      <h2 id="permissions">10) Autorisations que nous demandons (Android)</h2>
       <ul>
-        <li><strong>Notifications</strong> (permission Android 13+ au runtime) — pour afficher les alertes de rappel.</li>
-        <li><strong>Alarmes & rappels (alarmes exactes)</strong> (Android, optionnel) — uniquement si vous activez le mode « heure exacte » pour des rappels horaires plus précis.</li>
-        <li><strong>Localisation</strong> (approximative/précise ; « Autoriser tout le temps » peut être demandé) — pour les rappels basés sur la localisation (géorepérage) lorsque l’app est fermée.</li>
-        <li><strong>Microphone</strong> (optionnel) — uniquement si vous utilisez la saisie vocale.</li>
-        <li><strong>Service au premier plan</strong> (Android) — déclaré pour compatibilité avec l’exécution en arrière-plan sur certains appareils/versions d’OS.</li>
+        <li><strong>Notifications</strong> (autorisation d'execution Android 13+) - pour afficher les alertes de rappel.</li>
+        <li><strong>Alarmes et rappels (alarmes exactes)</strong> (Android, facultatif) - uniquement si vous activez le mode "heure exacte" pour des rappels horaires plus precis.</li>
+        <li><strong>Localisation</strong> (approximative/precise ; "Toujours autoriser" peut etre demande) - pour les rappels bases sur la localisation (georeperages) lorsque l'application est fermee.</li>
+        <li><strong>Microphone</strong> (facultatif) - uniquement si vous utilisez la saisie vocale.</li>
+        <li><strong>Service de premier plan</strong> (Android) - declare pour la compatibilite avec le fonctionnement en arriere-plan sur certains appareils/versions d'OS.</li>
       </ul>
-      <p>Vous pouvez accorder ou révoquer ces autorisations dans les réglages système. Si vous les refusez, certaines fonctionnalités peuvent ne pas fonctionner.</p>
+      <p>Vous pouvez accorder ou revoquer ces autorisations dans les parametres systeme. Si vous les refusez, les fonctionnalites associees peuvent ne pas fonctionner.</p>
 
-      <h2 id="analytics">11) Analytique et rapports de crash</h2>
+      <h2 id="analytics">11) Analyses et rapports de plantage</h2>
       <p>
-        Nous n’intégrons <strong>pas</strong> de SDK tiers d’analytique ni Crashlytics dans l’application.
-        Si l’app est distribuée via des stores, nous pouvons recevoir des métriques de stabilité <strong>agrégées</strong> (p. ex. nombre de crash/ANR) depuis les consoles des stores.
-        Si nous ajoutons ultérieurement une analytique/collecte de crash optionnelle, nous mettrons à jour cette politique.
+        Nous n'integrons <strong>pas</strong> de SDK d'analyse tiers ni de SDK Crashlytics dans l'application.
+        En cas de distribution via des boutiques d'applications, nous pouvons recevoir des metriques de stabilite <strong>agregees</strong> (par ex., nombres de crash/ANR) depuis les consoles des boutiques.
+        Si nous ajoutons plus tard des analyses/rapports de plantage optionnels, nous mettrons a jour cette politique.
       </p>
 
       <h2 id="changes">12) Modifications de cette politique</h2>
       <p>
-        Nous pouvons mettre à jour cette politique pour refléter des évolutions du produit ou de la loi.
-        Nous mettrons à jour la <strong>date d’entrée en vigueur</strong> ci-dessus et, en cas de changement important, nous vous informerons dans l’app ou par e-mail.
-        L’utilisation continue après une mise à jour signifie que vous acceptez la politique révisée.
+        Nous pouvons mettre a jour cette politique pour refleter des evolutions produit ou legales. Nous mettrons a jour la <strong>Date d'entree en vigueur</strong> ci-dessus et, pour les changements importants, vous informerons dans l'application ou par e-mail.
+        L'utilisation continue apres une mise a jour signifie que vous acceptez la politique revisee.
       </p>
 
-      <h2 id="contact">13) Contact</h2>
-      <p><strong>Responsable du traitement :</strong> Cosmin Oprea (personne physique)<br>
-         <strong>Email :</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
+      <h2 id="account-deletion">13) Suppression du compte</h2>
+      <p>
+        Vous pouvez supprimer votre compte depuis l'application (Parametres -> Compte -> Supprimer le compte).
+        Si vous ne pouvez pas acceder a l'application, vous pouvez demander la suppression via notre page web :
+        <a href="https://sharpcreations4.github.io/agenzo-privacy/account-deletion/fr/" target="_blank" rel="noopener">https://sharpcreations4.github.io/agenzo-privacy/account-deletion/fr/</a>.
+      </p>
+      <p class="meta">
+        Pour prevenir les abus, nous pouvons vous demander de confirmer la demande avec l'adresse e-mail associee a votre compte.
+      </p>
+
+      <h2 id="contact">14) Contact</h2>
+      <p><strong>Responsable du traitement :</strong> Cosmin Oprea (particulier)<br>
+         <strong>E-mail :</strong> <a href="mailto:sharpcreations4@gmail.com">sharpcreations4@gmail.com</a></p>
       <p style="margin-top:24px"><a href="#top">↑ Retour en haut</a></p>
     </article>
 
     <footer class="wrap">
-      <p>© <span id="y"></span> Agenzo – Smart Reminders</p>
+      <p>© <span id="y"></span> Agenzo - Smart Reminders</p>
     </footer>
   </main>
 
@@ -239,3 +328,4 @@
   </script>
 </body>
 </html>
+
